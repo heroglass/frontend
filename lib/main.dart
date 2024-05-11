@@ -71,62 +71,82 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme
-            .of(context)
-            .colorScheme
-            .inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headlineMedium,
-            ),
-          ],
+    return Column(
+      children: [
+        Container(
+          width: 393,
+          height: 852,
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(color: Color(0xFF3F6541)),
+          child: Stack(
+            children: [
+              const Positioned(
+                  left: 98,
+                  top: 549,
+                  child: DefaultTextStyle(
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'Apple SD Gothic Neo',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                      child: Text(
+                        '국군장병 안경 신청 배송 서비스',
+                      ))),
+              const Positioned(
+                left: 153,
+                top: 480,
+                child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 48,
+                      fontFamily: 'Apple SD Gothic Neo',
+                      fontWeight: FontWeight.w900,
+                      height: 0,
+                      letterSpacing: -4.80,
+                    ),
+                    child: Text(
+                      '히 글',
+                    )),
+              ),
+              Positioned(
+                left: 122,
+                top: 604,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white, minimumSize: Size(149, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    side: const BorderSide(width: 1, color: Colors.white),
+                    backgroundColor: const Color(0xFF3F6541),
+                  ),
+                  onPressed: () {
+                    // 버튼이 눌렸을 때 실행할 코드
+                    print("버튼이 클릭되었습니다.");
+                  },
+                  child: Text("시작하기"),
+                ),
+              ),
+              Positioned(
+                left: 139,
+                top: 277,
+                child: Container(
+                  width: 115,
+                  height: 65,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/logo.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ],
     );
   }
 }
@@ -145,7 +165,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
             builder: (context) =>
-            const MyHomePage(title: "my first navigation")),
+                const MyHomePage(title: "my first navigation")),
       );
     });
   }
@@ -162,12 +182,12 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Stack(
             children: [
               // 로딩 동그란 바 추가
-              Center(
+              const Center(
                 child: CircularProgressIndicator(
                   color: Colors.white, // 로딩 색상 변경 가능
                 ),
               ),
-              Positioned(
+              const Positioned(
                   left: 98,
                   top: 549,
                   child: DefaultTextStyle(
