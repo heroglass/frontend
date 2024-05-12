@@ -1,43 +1,16 @@
-import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:heroglass/screens/signin/signin_page.dart';
-import 'package:heroglass/screens/splash/splash_page.dart';
+import 'package:heroglass/screens/payment/payment_page.dart';
 
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: SplashScreen());
-  }
-}
-
-
-
-
-
-
-class StartPage extends StatefulWidget {
-  const StartPage({super.key});
+class PaymentStart extends StatefulWidget {
+  const PaymentStart({super.key, required Map<String, String> arguments});
 
   @override
-  State<StartPage> createState() => StartPageState();
+  State<PaymentStart> createState() => _PaymentStartState();
 }
 
-class StartPageState extends State<StartPage> {
+class _PaymentStartState extends State<PaymentStart> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -54,7 +27,7 @@ class StartPageState extends State<StartPage> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF317000)),
+          decoration: BoxDecoration(color: Color(0xFF3F6541)),
           child: Stack(
             children: [
               const Positioned(
@@ -98,16 +71,14 @@ class StartPageState extends State<StartPage> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     side: const BorderSide(width: 1, color: Colors.white),
-                    backgroundColor: const Color(0xFF317000),
+                    backgroundColor: const Color(0xFF3F6541),
                   ),
                   onPressed: () {
                     // 버튼이 눌렸을 때 실행할 코드
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Payment()));
                   },
-                  child: const Text("시작하기"),
+                  child: const Text("결제하기"),
                 ),
               ),
               Positioned(
