@@ -24,6 +24,166 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class SignupPage1 extends StatelessWidget {
+  const SignupPage1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 393,
+      height: 852,
+      clipBehavior: Clip.hardEdge,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ),
+      child: SizedBox(
+        width: double.infinity,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            const Positioned(
+              left: 40,
+              top: 199,
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  color: Color(0xFF333333),
+                  fontSize: 28,
+                  fontWeight: FontWeight.w800,
+                  height: 1.3,
+                  fontFamily: 'Apple SD Gothic Neo',
+                ),
+                child: Text(
+                  '닉네임을 설정해주세요.',
+                ),
+              ),
+            ),
+            Positioned(
+              left: 40,
+              top: 340,
+              child: Material(
+                // Material 위젯 추가
+                child: Container(
+                  width: 313,
+                  height: 48,
+                  // 높이 조절
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    color: Colors.white, // 배경색 변경
+                    borderRadius: BorderRadius.circular(4.0), // 모서리 둥글기 적용
+                  ),
+                  child: const TextField(
+                    style: TextStyle(
+                      color: Color(0xFFCFCFCF),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800,
+                      height: 0.9,
+                      fontFamily: 'Apple SD Gothic Neo',
+                    ),
+                    decoration: InputDecoration(
+                      border: InputBorder.none, // 테두리 제거
+                      hintText: '히어로 글래스', // 플레이스홀더 텍스트
+                      hintStyle: TextStyle(
+                        color: Color(0xFFCFCFCF),
+                        fontSize: 24,
+                        fontWeight: FontWeight.w800,
+                        height: 0.9,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 10), // 내부 패딩 조절
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 40,
+              top: 381,
+              child: Image.network(
+                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F7e5fc0ad28f0af07eca44d53d7f71a6d.png',
+                width: 313,
+                height: 1,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              left: 40,
+              top: 478,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Color(0xFF333333), // 버튼의 배경색
+                  minimumSize: Size(313, 40), // 버튼의 최소 크기
+                  padding: EdgeInsets.zero, // 내부 여백 없애기
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero, // 모서리 둥글기 제거
+                  ),
+                ),
+                onPressed: () {
+                  // 버튼 클릭 시 수행할 동작
+                  print('버튼 클릭됨');
+                },
+                child: const DefaultTextStyle(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    height: 1.4,
+                    fontFamily: 'Apple SD Gothic Neo',
+                  ),
+                  child: Text(
+                    '다음',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 39,
+              top: 400,
+              child: Visibility(
+                visible: false, // 중복된 이름이 있을 경우에만 텍스트를 보여줍니다.
+                child: DefaultTextStyle(
+                  style: TextStyle(
+                    color: Color(0xFFFF0000),
+                    // 빨간색으로 경고 메시지 표시
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    height: 1.8,
+                    fontFamily: 'Apple SD Gothic Neo',
+                  ),
+                  child: Text(
+                    '중복된 이름이에요. 다른 이름으로 시도해주세요.',
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 165,
+              top: 761,
+              child: Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2F72872922881f73333d8d91269b2c089fe9b64193%E1%84%80%E1%85%AE%E1%86%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%AE%20%E1%84%86%E1%85%A1%E1%84%8F%E1%85%B3_%E1%84%8F%E1%85%A5%E1%86%AF%E1%84%85%E1%85%A5%E1%84%87%E1%85%A9%E1%86%AB%201.png?alt=media&token=4c202d51-9aa9-4168-b32e-90d5d7dcaf30',
+                width: 63,
+                height: 50,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned(
+              left: 182,
+              top: 248,
+              child: Image.network(
+                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F86fb150696825a5c3f4e405d84d35894.png',
+                width: 30,
+                height: 30,
+                fit: BoxFit.contain,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class PaymentStart extends StatefulWidget {
   const PaymentStart({super.key, required Map<String, String> arguments});
 
@@ -191,6 +351,93 @@ class Payment extends StatelessWidget {
   }
 }
 
+class MilipassPage extends StatelessWidget {
+  const MilipassPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 393,
+      height: 852,
+      clipBehavior: Clip.hardEdge,
+      decoration: const BoxDecoration(
+        color: Color(0xFF317000),
+      ),
+      child: SizedBox(
+        width: double.infinity,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            const Positioned(
+                left: 97,
+                top: 548,
+                child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontFamily: 'Apple SD Gothic Neo',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                    child: Text(
+                      '국군장병 안경 신청 배송 서비스',
+                    ))),
+            Positioned(
+              left: 122,
+              top: 604,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(149, 40),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  side: const BorderSide(width: 1, color: Colors.white),
+                  backgroundColor: const Color(0xFF317000),
+                ),
+                onPressed: () {
+                  // 버튼이 눌렸을 때 실행할 코드
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignupPage1()));
+                },
+                child: const Text("밀리패스로 시작"),
+              ),
+            ),
+            const Positioned(
+              left: 152,
+              top: 479,
+              child: DefaultTextStyle(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 48,
+                    fontFamily: 'Apple SD Gothic Neo',
+                    fontWeight: FontWeight.w900,
+                    height: 0,
+                    letterSpacing: -4.80,
+                  ),
+                  child: Text(
+                    '히 글',
+                  )),
+            ),
+            Positioned(
+              left: 139,
+              top: 277,
+              child: Image.network(
+                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa31269afac766d8d5be44664473979e6.png',
+                width: 115,
+                height: 65,
+                fit: BoxFit.contain,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -253,7 +500,7 @@ class _LoginPageState extends State<LoginPage> {
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+                    color: const Color(0xFF317000),
                   ),
                 ),
               ),
@@ -285,20 +532,25 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 51,
-              top: 543,
-              child: DefaultTextStyle(
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
+              top: 530,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.transparent, // 투명한 배경색 설정
+                  primary: Color(0xFF333333), // 텍스트 색상 설정
+                  textStyle: TextStyle(
+                    fontSize: 12,
+                    fontFamily: 'Apple SD Gothic Neo',
+                  ),
                 ),
-                child: Text(
-                  '회원가입',
-                ),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MilipassPage()));
+                },
+                child: Text('회원가입'),
               ),
             ),
             const Positioned(
@@ -427,9 +679,7 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -452,7 +702,7 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF3F6541)),
+          decoration: BoxDecoration(color: Color(0xFF317000)),
           child: Stack(
             children: [
               const Positioned(
@@ -496,7 +746,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     side: const BorderSide(width: 1, color: Colors.white),
-                    backgroundColor: const Color(0xFF3F6541),
+                    backgroundColor: const Color(0xFF317000),
                   ),
                   onPressed: () {
                     // 버튼이 눌렸을 때 실행할 코드
@@ -542,10 +792,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () {
       Navigator.push(
         context,
-        MaterialPageRoute(
-            builder: (context) => const PaymentStart(
-                  arguments: {},
-                )),
+        MaterialPageRoute(builder: (context) => const MyHomePage()),
       );
     });
   }
@@ -558,7 +805,7 @@ class _SplashScreenState extends State<SplashScreen> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF3F6541)),
+          decoration: BoxDecoration(color: Color(0xFF317000)),
           child: Stack(
             children: [
               // 로딩 동그란 바 추가
