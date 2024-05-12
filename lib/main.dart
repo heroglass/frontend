@@ -129,7 +129,7 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return IamportPayment(
       appBar: AppBar(
-        title: Text('아임포트 결제'),
+        title: Text('결제'),
       ),
       /* 웹뷰 로딩 컴포넌트 */
       initialChild: Container(
