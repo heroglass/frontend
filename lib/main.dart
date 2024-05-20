@@ -1,9 +1,7 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/signin/signin_page.dart';
 import 'package:heroglass/screens/splash/splash_page.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -24,10 +22,6 @@ class MyApp extends StatelessWidget {
         home: SplashScreen());
   }
 }
-
-
-
-
 
 
 class StartPage extends StatefulWidget {

@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:heroglass/screens/main/main_page.dart';
 
 import '../milipass/milipass_page.dart';
 
@@ -88,6 +87,8 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   // 버튼 클릭 시 수행할 작업
                   print('버튼이 클릭되었습니다.');
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) =>  MainPage()));
                 },
                 child: const DefaultTextStyle(
                   style: TextStyle(

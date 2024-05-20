@@ -1,9 +1,100 @@
+import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:heroglass/screens/main/product.dart';
+import 'package:heroglass/screens/main/product_item.dart';
 
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+class MainPage extends StatefulWidget {
+  @override
+  MainPageState createState() => MainPageState();
+}
+
+class MainPageState extends State<MainPage> {
+  bool isPressed1 = false;
+  bool isPressed2 = false;
+  bool isPressed3 = false;
+  bool isPressed4 = false;
+
+  static List<Product> products = [
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+    Product(
+      title: '한글안경',
+      description: '서울컬렉션 뚝섬 그레이',
+      discount: '53%',
+      price: '45,600원',
+      itemType: '뿔테안경',
+      shipping: '무료배송',
+      views: '4,329',
+      imageUrl:
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,76 +111,276 @@ class MainPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 9,
-              top: 0,
+              left: 16,
+              top: 638,
               child: Container(
-                width: 375,
-                height: 48,
-                color: Colors.white,
+                width: 361,
+                height: 164,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    const Positioned(
-                      left: 32,
-                      top: 13,
-                      child: Text(
-                        '9:41',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
-                          height: 1.3,
-                          fontFamily: 'SF Pro Text',
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      child: Container(
+                        width: 361,
+                        height: 164,
+                        clipBehavior: Clip.hardEdge,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF7F7F7),
+                          border: Border.all(
+                            width: 3,
+                            color: const Color(0x7F1C301F),
+                          ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
                       ),
                     ),
                     Positioned(
-                      left: 297,
-                      top: 18,
-                      child: Image.network(
-                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fedb777d2b9947c41b208467ea92ff207.png',
-                        width: 44,
-                        height: 12,
-                        fit: BoxFit.contain,
+                      left: -7,
+                      top: 73,
+                      child: Transform.rotate(
+                        angle: 10 * pi / 180,
+                        child: Image.network(
+                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F72d3a8cbd6fef1ed4271300da8661cca.png',
+                          width: 52,
+                          height: 73,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                     Positioned(
-                      left: 332,
-                      top: 18,
-                      child: Opacity(
-                        opacity: 0.3,
+                      left: 291,
+                      top: 97,
+                      child: Transform.rotate(
+                        angle: 325 * pi / 180,
                         child: Container(
-                          width: 25,
-                          height: 13,
+                          width: 23,
+                          height: 23,
                           clipBehavior: Clip.hardEdge,
                           decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(4),
+                            borderRadius: BorderRadius.circular(12),
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFF161616), Color(0xFFD4D4D4)],
+                              stops: [0.48, 1],
+                            ),
                           ),
                         ),
                       ),
                     ),
                     Positioned(
-                      left: 358,
-                      top: 22,
+                      left: 294,
+                      top: 99,
+                      child: Transform.rotate(
+                        angle: 35 * pi / 180,
+                        child: Image.network(
+                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F402f7714c68690910f026012aeccdfe1.png',
+                          width: 16,
+                          height: 18,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 141,
+                      top: 82,
+                      child: Transform.rotate(
+                        angle: 26 * pi / 180,
+                        child: Container(
+                          width: 12,
+                          height: 12,
+                          clipBehavior: Clip.hardEdge,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFF161616), Color(0xFFD4D4D4)],
+                              stops: [0.48, 1],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 143,
+                      top: 83,
+                      child: Transform.rotate(
+                        angle: 334 * pi / 180,
+                        child: Image.network(
+                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F5e76ab7d2c23d221846d584465f1b12b.png',
+                          width: 8,
+                          height: 10,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 322,
+                      top: 15,
+                      child: Transform.rotate(
+                        angle: 188 * pi / 180,
+                        child: Image.network(
+                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F662dd767b1a46ef08ed6942a793c843e.png',
+                          width: 31,
+                          height: 53,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 154,
+                      top: 91,
+                      child: Transform.rotate(
+                        angle: 154 * pi / 180,
+                        child: Image.network(
+                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fe9940b926ea551baf5c1a818f80ebc56.png',
+                          width: 11,
+                          height: 25,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 19,
+                      top: 30,
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(
+                            color: Color(0xFF1C301F),
+                            fontSize: 13,
+                            height: 1.7,
+                            fontFamily: 'Apple SD Gothic Neo',
+                          ),
+                          children: [
+                            TextSpan(
+                              text: '국군의 날',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Apple SD Gothic Neo',
+                              ),
+                            ),
+                            TextSpan(
+                              text: ' ',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                            TextSpan(
+                              text: '기념',
+                              style: TextStyle(
+                                color: Color(0xFF676767),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 19,
+                      top: 52,
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            height: 1.4,
+                            fontFamily: 'Apple SD Gothic Neo',
+                          ),
+                          children: [
+                            TextSpan(
+                              text: '오직 하루',
+                              style: TextStyle(
+                                color: Color(0xFF1C301F),
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Apple SD Gothic Neo',
+                              ),
+                            ),
+                            TextSpan(text: ' '),
+                            TextSpan(
+                              text: '쏟아지는',
+                              style: TextStyle(
+                                color: Color(0xFF676767),
+                              ),
+                            ),
+                            TextSpan(text: ' '),
+                            TextSpan(
+                              text: '혜택',
+                              style: TextStyle(
+                                color: Color(0xFF1C301F),
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Apple SD Gothic Neo',
+                              ),
+                            ),
+                            TextSpan(text: ' '),
+                            TextSpan(
+                              text: '받아가세요',
+                              style: TextStyle(
+                                color: Color(0xFF676767),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 128,
+                      top: 20,
                       child: Image.network(
-                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F90dcd3b7d5032f9485f4e303fe1a3ad9.png',
-                        width: 1,
-                        height: 4,
+                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fed44288f3afd4233adc5476a72585daf.png',
+                        width: 17,
+                        height: 22,
                         fit: BoxFit.contain,
                       ),
                     ),
                     Positioned(
-                      left: 334,
-                      top: 20,
+                      left: 254,
+                      top: 57,
+                      child: Image.network(
+                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F62d4aeece92cee930eb63a75f1883cf2.png',
+                        width: 12,
+                        height: 12,
+                        fit: BoxFit.contain,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 761,
+              child: Container(
+                width: 393,
+                height: 91,
+                clipBehavior: Clip.hardEdge,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF1C301F),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 9,
+              top: 831,
+              child: Container(
+                width: 375,
+                height: 21,
+                color: Colors.transparent,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned(
+                      left: 118,
+                      top: 8,
                       child: Container(
-                        width: 21,
-                        height: 9,
+                        width: 139,
+                        height: 5,
                         clipBehavior: Clip.hardEdge,
                         decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(3),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
                         ),
                       ),
                     )
@@ -98,816 +389,427 @@ class MainPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 145,
-              top: 64,
-              child: Container(
-                width: 104,
-                height: 35,
-                clipBehavior: Clip.hardEdge,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF878787),
+              left: 16,
+              top: 52,
+              child: Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa99abf68632999e0b4894556d88b3e69ad7f8c33%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%201.png?alt=media&token=91f8e408-4b66-49c8-ac6b-e66d21c5cbe9',
+                width: 56,
+                height: 50,
+                fit: BoxFit.cover,
+              ),
+            ),
+            const Positioned(
+              left: 81,
+              top: 68,
+              child: Text(
+                '히 글',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFF1C301F),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: -3,
+                  fontFamily: 'Apple SD Gothic Neo',
                 ),
               ),
             ),
-            Positioned(
-              left: 16,
-              top: 213,
-              child: Container(
-                width: 70,
-                height: 70,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(3),
+            Container(
+                margin: EdgeInsets.fromLTRB(16, 210, 0, 0),
+                height: 315,
+                child: ListView.builder(
+                    padding: EdgeInsets.zero,
+                    itemCount: products.length,
+                    itemBuilder: (context, index) {
+                      final product = products[index];
+                      return ProductItem(product: product);
+                    })),
+            Stack(
+              children: [
+                Positioned(
+                  left: 16,
+                  top: 553,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    clipBehavior: Clip.hardEdge,
+                    child: Image.network(
+                      'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F81ef31ddd09ff24a04228438e1763219.png',
+                      width: 361,
+                      height: 70,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ),
-              ),
+                const Positioned(
+                  left: 35,
+                  top: 564,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF1C301F),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2,
+                      fontFamily: 'Apple SD Gothic Neo',
+                    ),
+                    child: Text(
+                      '히글에서 구매하면 무료배송!',
+                    ),
+                  ),
+                ),
+                const Positioned(
+                  left: 35,
+                  top: 589,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF1C301F),
+                      fontSize: 14,
+                      letterSpacing: -1,
+                      height: 1.6,
+                      fontFamily: 'Apple SD Gothic Neo',
+                    ),
+                    child: Text(
+                      '오직 국군장병을 위한 안경 주문 배송 서비스',
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 300,
+                  top: 581,
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fefeddf06d5f0e75e4b97dd1e2a9edf28.png',
+                    width: 24,
+                    height: 33,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Positioned(
+                  left: 306,
+                  top: 590,
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F69d71c4a358758511f444846e3ea553a.png',
+                    width: 12,
+                    height: 16,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Positioned(
+                  left: 326,
+                  top: 581,
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F16c8d8a61127c476ad3b31e3a353e10a.png',
+                    width: 24,
+                    height: 33,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Positioned(
+                  left: 310,
+                  top: 566,
+                  child: Transform.rotate(
+                    angle: 12 * pi / 180,
+                    child: Image.network(
+                      'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fb3fa6b1cf610f538d50507317ac576dd.png',
+                      width: 34,
+                      height: 35,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 323,
+                  top: 581,
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Ff8428198a70ce4f684044475f95431c6.png',
+                    width: 8,
+                    height: 11,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Positioned(
+                  left: 344,
+                  top: 563,
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fe804b8f134c744af15572219719ffb8a.png',
+                    width: 20,
+                    height: 19,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ],
             ),
             Positioned(
-              left: 16,
-              top: 293,
+              left: 60,
+              top: 782,
               child: Container(
-                width: 70,
-                height: 70,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(3),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
-              top: 373,
-              child: Container(
-                width: 70,
-                height: 70,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(3),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
-              top: 453,
-              child: Container(
-                width: 70,
-                height: 70,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(3),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
-              top: 125,
-              child: Container(
-                width: 70,
-                height: 34,
+                width: 20,
+                height: 20,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+                    width: 2,
+                    color: Colors.white,
                   ),
-                  borderRadius: BorderRadius.circular(17),
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
+            Positioned(
+              left: 51,
+              top: 798,
+              child: Image.network(
+                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F487c2f3aa1bfaff97addec585c78ef7c.png',
+                width: 12,
+                height: 12,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              left: 320,
+              top: 782,
+              child: Container(
+                width: 14,
+                height: 14,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.circular(7),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 313,
+              top: 795,
+              child: Container(
+                width: 28,
+                height: 15,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                  ),
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(6),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 186,
+              top: 792,
+              child: Container(
+                width: 20,
+                height: 18,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 182,
+              top: 782,
+              child: Image.network(
+                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fac684ee59a060e7cb0aaae91fedc5e37.png',
+                width: 28,
+                height: 15,
+                fit: BoxFit.contain,
+              ),
+            ),
             const Positioned(
-              left: 31,
-              top: 130,
-              child: Text(
-                '안경테',
-                textAlign: TextAlign.center,
+              left: 15,
+              top: 178,
+              child: DefaultTextStyle(
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Color(0xFF333333),
                   fontSize: 14,
+                  fontWeight: FontWeight.bold,
                   height: 1.6,
                   fontFamily: 'Apple SD Gothic Neo',
                 ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 207,
-              child: Text(
-                '아큐브',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 287,
-              child: Text(
-                '아큐브',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 367,
-              child: Text(
-                '아큐브',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 447,
-              child: Text(
-                '아큐브',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 226,
-              child: Text(
-                '원데이 아큐브 모이스트 1박스 30개입',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 306,
-              child: Text(
-                '원데이 아큐브 모이스트 1박스 30개입',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 386,
-              child: Text(
-                '원데이 아큐브 모이스트 1박스 30개입',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 95,
-              top: 466,
-              child: Text(
-                '원데이 아큐브 모이스트 1박스 30개입',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
+                child: Text(
+                  '전체보기',
                 ),
               ),
             ),
             Positioned(
-              left: 95,
-              top: 243,
-              child: RichText(
-                text: const TextSpan(
-                  style: TextStyle(
-                    color: Color(0xFFFF0000),
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    height: 1.8,
-                    fontFamily: 'Apple SD Gothic Neo',
+              left: 16,
+              top: 115,
+              child: SizedBox(
+                width: 70,
+                height: 34,
+                child: OutlinedButton(
+                  onPressed: () {
+                    setState(() {
+                      isPressed1 = !isPressed1;
+                      isPressed2 = false;
+                      isPressed3 = false;
+                      isPressed4 = false;
+                    });
+                    print(isPressed1);
+                    print(isPressed2);
+                    print(isPressed3);
+                    print(isPressed4);
+                    print('Button Pressed');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: isPressed1 ? Colors.black : Color(0xFF8D8D8D)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                    ),
+                    padding: EdgeInsets.zero, // 패딩을 제거하여 텍스트가 잘리지 않도록 함
                   ),
-                  children: [
-                    TextSpan(text: '10%'),
-                    TextSpan(
-                      text: ' 19,990원',
+                  child: Center(
+                    child: Text(
+                      '안경테',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xFF333333),
+                        color: isPressed1 ? Colors.black : Color(0xFF8D8D8D),
+                        fontSize: 14,
+                        height: 1.6,
+                        fontFamily: 'Apple SD Gothic Neo',
                       ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              left: 95,
-              top: 323,
-              child: RichText(
-                text: const TextSpan(
-                  style: TextStyle(
-                    color: Color(0xFFFF0000),
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    height: 1.8,
-                    fontFamily: 'Apple SD Gothic Neo',
+                    ),
                   ),
-                  children: [
-                    TextSpan(text: '10%'),
-                    TextSpan(
-                      text: ' 19,990원',
-                      style: TextStyle(
-                        color: Color(0xFF333333),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              left: 95,
-              top: 403,
-              child: RichText(
-                text: const TextSpan(
-                  style: TextStyle(
-                    color: Color(0xFFFF0000),
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    height: 1.8,
-                    fontFamily: 'Apple SD Gothic Neo',
-                  ),
-                  children: [
-                    TextSpan(text: '10%'),
-                    TextSpan(
-                      text: ' 19,990원',
-                      style: TextStyle(
-                        color: Color(0xFF333333),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              left: 95,
-              top: 483,
-              child: RichText(
-                text: const TextSpan(
-                  style: TextStyle(
-                    color: Color(0xFFFF0000),
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    height: 1.8,
-                    fontFamily: 'Apple SD Gothic Neo',
-                  ),
-                  children: [
-                    TextSpan(text: '10%'),
-                    TextSpan(
-                      text: ' 19,990원',
-                      style: TextStyle(
-                        color: Color(0xFF333333),
-                      ),
-                    )
-                  ],
                 ),
               ),
             ),
             Positioned(
               left: 113,
-              top: 125,
-              child: Container(
+              top: 115,
+              child: SizedBox(
                 width: 70,
                 height: 34,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+                child: OutlinedButton(
+                  onPressed: () {
+                    // 버튼을 눌렀을 때 수행할 작업
+                    setState(() {
+                      isPressed2 = !isPressed2;
+                      isPressed1 = false;
+                      isPressed3 = false;
+                      isPressed4 = false;
+                    });
+                    print(isPressed1);
+                    print(isPressed2);
+                    print(isPressed3);
+                    print(isPressed4);
+                    print('Button Pressed');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: isPressed2 ? Colors.black : Color(0xFF8D8D8D)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                    ),
+                    padding: EdgeInsets.zero, // 패딩을 제거하여 텍스트가 잘리지 않도록 함
                   ),
-                  borderRadius: BorderRadius.circular(17),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 96,
-              top: 268,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 96,
-              top: 348,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 96,
-              top: 428,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 96,
-              top: 508,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 156,
-              top: 268,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 156,
-              top: 348,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 156,
-              top: 428,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 156,
-              top: 508,
-              child: Container(
-                width: 50,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 128,
-              top: 130,
-              child: Text(
-                '안경알',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
+                  child: Center(
+                    child: Text(
+                      '안경알',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: isPressed2 ? Colors.black : Color(0xFF8D8D8D),
+                        fontSize: 14,
+                        height: 1.6,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
             Positioned(
               left: 210,
-              top: 125,
-              child: Container(
+              top: 115,
+              child: SizedBox(
                 width: 70,
                 height: 34,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xFF333333),
+                child: OutlinedButton(
+                  onPressed: () {
+                    // 버튼을 눌렀을 때 수행할 작업
+                    setState(() {
+                      isPressed3 = !isPressed3;
+                      isPressed1 = false;
+                      isPressed2 = false;
+                      isPressed4 = false;
+                    });
+                    print(isPressed1);
+                    print(isPressed2);
+                    print(isPressed3);
+                    print(isPressed4);
+                    print('Button Pressed');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: isPressed3 ? Colors.black : Color(0xFF8D8D8D)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                    ),
+                    padding: EdgeInsets.zero, // 패딩을 제거하여 텍스트가 잘리지 않도록 함
                   ),
-                  borderRadius: BorderRadius.circular(17),
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 231,
-              top: 130,
-              child: Text(
-                '렌즈',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
+                  child: Center(
+                    child: Text(
+                      '렌즈',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: isPressed3 ? Colors.black : Color(0xFF8D8D8D),
+                        fontSize: 14,
+                        height: 1.6,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
             Positioned(
               left: 307,
-              top: 125,
-              child: Container(
+              top: 115,
+              child: SizedBox(
                 width: 70,
                 height: 34,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+                child: OutlinedButton(
+                  onPressed: () {
+                    // 버튼을 눌렀을 때 수행할 작업
+                    setState(() {
+                      isPressed4 = !isPressed4;
+                      isPressed2 = false;
+                      isPressed3 = false;
+                      isPressed1 = false;
+                    });
+                    print(isPressed1);
+                    print(isPressed2);
+                    print(isPressed3);
+                    print(isPressed4);
+                    print('Button Pressed');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: isPressed4 ? Colors.black : Color(0xFF8D8D8D)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                    ),
+                    padding: EdgeInsets.zero, // 패딩을 제거하여 텍스트가 잘리지 않도록 함
                   ),
-                  borderRadius: BorderRadius.circular(17),
+                  child: Center(
+                    child: Text(
+                      '선글라스',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: isPressed4 ? Colors.black : Color(0xFF8D8D8D),
+                        fontSize: 14,
+                        height: 1.6,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            const Positioned(
-              left: 317,
-              top: 130,
-              child: Text(
-                '선글라스',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 15,
-              top: 173,
-              child: Text(
-                '콘텍트렌즈',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 106,
-              top: 173,
-              child: Text(
-                '하드렌즈',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 185,
-              top: 173,
-              child: Text(
-                '난시・근시 렌즈',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            Positioned(
-              left: 91,
-              top: 180,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(26),
-                clipBehavior: Clip.hardEdge,
-                child: Image.network(
-                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F3f4847d2bf1a1d4a017c47fce617e145.png',
-                  width: 1,
-                  height: 11,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            Positioned(
-              left: 170,
-              top: 180,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(26),
-                clipBehavior: Clip.hardEdge,
-                child: Image.network(
-                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F3f4847d2bf1a1d4a017c47fce617e145.png',
-                  width: 1,
-                  height: 11,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 103,
-              top: 264,
-              child: Text(
-                '하루착용',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 103,
-              top: 344,
-              child: Text(
-                '하루착용',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 103,
-              top: 424,
-              child: Text(
-                '하루착용',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 103,
-              top: 504,
-              child: Text(
-                '하루착용',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 163,
-              top: 264,
-              child: Text(
-                '무료배송',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 163,
-              top: 344,
-              child: Text(
-                '무료배송',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 163,
-              top: 424,
-              child: Text(
-                '무료배송',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 163,
-              top: 504,
-              child: Text(
-                '무료배송',
-                style: TextStyle(
-                  color: Color(0xFF8D8D8D),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 345,
-              top: 244,
-              child: Text(
-                '1,330',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 347,
-              top: 324,
-              child: Text(
-                '880',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 345,
-              top: 404,
-              child: Text(
-                '3,310',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 345,
-              top: 484,
-              child: Text(
-                '1,330',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
-              top: 547,
-              child: Container(
-                width: 361,
-                height: 70,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 27,
-              top: 575,
-              child: Text(
-                '쿠폰, 혜택 등 안내',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 17,
-                  height: 1.3,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
-              top: 639,
-              child: Container(
-                width: 361,
-                height: 300,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 33,
-              top: 742,
-              child: Text(
-                '주변 군 제휴 안경점을\n찾아보세요',
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  height: 0.9,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-              ),
-            ),
-            Positioned(
-              left: 348,
-              top: 230,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F3eefbca448c59ef2597f587a3a106b2e.png',
-                width: 18,
-                height: 17,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 348,
-              top: 310,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd34ce61a04d63c31b23460f0b2c3bc27.png',
-                width: 18,
-                height: 17,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 348,
-              top: 390,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd34ce61a04d63c31b23460f0b2c3bc27.png',
-                width: 18,
-                height: 17,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 348,
-              top: 470,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd34ce61a04d63c31b23460f0b2c3bc27.png',
-                width: 18,
-                height: 17,
-                fit: BoxFit.contain,
-              ),
-            )
           ],
         ),
       ),
