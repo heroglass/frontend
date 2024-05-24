@@ -18,6 +18,7 @@ class MainPageState extends State<MainPage> {
 
   static List<Product> products = [
     Product(
+      id: 1,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -29,6 +30,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 2,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -40,6 +42,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 3,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -51,6 +54,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 4,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -62,6 +66,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 5,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -73,6 +78,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 6,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -84,6 +90,7 @@ class MainPageState extends State<MainPage> {
           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
     ),
     Product(
+      id: 7,
       title: '한글안경',
       description: '서울컬렉션 뚝섬 그레이',
       discount: '53%',
@@ -537,88 +544,32 @@ class MainPageState extends State<MainPage> {
               ],
             ),
             Positioned(
-              left: 60,
-              top: 782,
-              child: Container(
-                width: 20,
-                height: 20,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-            ),
+                left: 40,
+                top: 768,
+                child: IconButton(
+                  onPressed: () => {},
+                  icon: Icon(Icons.search),
+                  iconSize: 40,
+                  color: Colors.white,
+                )),
             Positioned(
-              left: 51,
-              top: 798,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F487c2f3aa1bfaff97addec585c78ef7c.png',
-                width: 12,
-                height: 12,
-                fit: BoxFit.contain,
-              ),
-            ),
+                left: 168,
+                top: 768,
+                child: IconButton(
+                  onPressed: () => {},
+                  icon: Icon(Icons.home_outlined),
+                  iconSize: 40,
+                  color: Colors.white,
+                )),
             Positioned(
-              left: 320,
-              top: 782,
-              child: Container(
-                width: 14,
-                height: 14,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.white,
-                  ),
-                  borderRadius: BorderRadius.circular(7),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 313,
-              top: 795,
-              child: Container(
-                width: 28,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                  ),
-                  borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(6),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 186,
-              top: 792,
-              child: Container(
-                width: 20,
-                height: 18,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 182,
-              top: 782,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fac684ee59a060e7cb0aaae91fedc5e37.png',
-                width: 28,
-                height: 15,
-                fit: BoxFit.contain,
-              ),
-            ),
+                left: 300,
+                top: 768,
+                child: IconButton(
+                  onPressed: () => {},
+                  icon: Icon(Icons.perm_identity_outlined),
+                  iconSize: 40,
+                  color: Colors.white,
+                )),
             const Positioned(
               left: 15,
               top: 178,

@@ -105,8 +105,7 @@ class _LoginPageState extends State<LoginPage> {
               top: 530,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Colors.transparent, // 투명한 배경색 설정
-                  primary: Color(0xFF333333), // 텍스트 색상 설정
+                  foregroundColor: Color(0xFF333333), backgroundColor: Colors.transparent, // 텍스트 색상 설정
                   textStyle: TextStyle(
                     fontSize: 12,
                     fontFamily: 'Apple SD Gothic Neo',

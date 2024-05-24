@@ -1,4 +1,5 @@
 class Product {
+  final int id;
   final String title;
   final String description;
   final String discount;
@@ -9,6 +10,7 @@ class Product {
   final String imageUrl;
 
   Product({
+    required this.id,
     required this.title,
     required this.description,
     required this.discount,
