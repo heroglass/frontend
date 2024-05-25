@@ -455,13 +455,15 @@ class MyOrderPage extends StatelessWidget {
             const Positioned(
               left: 140,
               top: 155,
-              child: Text(
-                '~',
+              child: DefaultTextStyle(
                 style: TextStyle(
                   color: Color(0xFF333333),
                   fontSize: 14,
                   height: 1.6,
                   fontFamily: 'Apple SD Gothic Neo',
+                ),
+                child: Text(
+                  '~',
                 ),
               ),
             )

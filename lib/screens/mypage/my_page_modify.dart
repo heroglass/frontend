@@ -19,7 +19,7 @@ class MyModifyPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 0,
+              left: 16,
               top: 564,
               child: Container(
                 width: 90,
@@ -104,7 +104,7 @@ class MyModifyPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 16,
+              left: 0,
               top: 59,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(

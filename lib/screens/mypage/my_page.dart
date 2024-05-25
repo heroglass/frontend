@@ -22,7 +22,7 @@ class MyPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 0,
+              left: 16,
               top: 148,
               child: Container(
                 width: 361,
@@ -86,35 +86,9 @@ class MyPage extends StatelessWidget {
                 ),
               ),
             ),
+
             Positioned(
-              left: 9,
-              top: 832,
-              child: Container(
-                width: 375,
-                height: 21,
-                color: Colors.transparent,
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Positioned(
-                      left: 118,
-                      top: 8,
-                      child: Container(
-                        width: 139,
-                        height: 5,
-                        clipBehavior: Clip.hardEdge,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              left: 16,
+              left: 0,
               top: 59,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -224,7 +198,7 @@ class MyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 33,
-              top: 232,
+              top: 226,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Colors.white,
@@ -372,7 +346,7 @@ class MyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 172,
-              top: 232,
+              top: 226,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Colors.white,
@@ -388,7 +362,7 @@ class MyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 231,
-              top: 232,
+              top: 226,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Colors.white,
@@ -404,7 +378,7 @@ class MyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 290,
-              top: 232,
+              top: 226,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Colors.white,
@@ -420,7 +394,7 @@ class MyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 335,
-              top: 232,
+              top: 226,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Colors.white,
