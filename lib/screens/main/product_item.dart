@@ -80,7 +80,7 @@ class ProductItem extends StatelessWidget {
             ),
             Positioned(
               left: 79,
-              top: 36,
+              top: 40,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Color(0xFFFF0000),
@@ -137,7 +137,7 @@ class ProductItem extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xFF8D8D8D),
                   fontSize: 10,
-                  height: 2.2,
+                  height: 2,
                   fontFamily: 'Apple SD Gothic Neo',
                 ),
                 child: Text(
@@ -152,7 +152,7 @@ class ProductItem extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xFF8D8D8D),
                   fontSize: 10,
-                  height: 2.2,
+                  height: 2,
                   fontFamily: 'Apple SD Gothic Neo',
                 ),
                 child: Text(
