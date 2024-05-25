@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/product.dart';
 import 'package:heroglass/screens/main/product_item.dart';
+import 'package:heroglass/screens/mypage/my_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -565,7 +566,10 @@ class MainPageState extends State<MainPage> {
                 left: 300,
                 top: 768,
                 child: IconButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (contxet) => MyPage()))
+                  },
                   icon: Icon(Icons.perm_identity_outlined),
                   iconSize: 40,
                   color: Colors.white,
