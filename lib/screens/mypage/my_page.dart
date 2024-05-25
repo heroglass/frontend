@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'my_page_modify.dart';
+
 class MyPage extends StatelessWidget {
   const MyPage({super.key});
 
@@ -83,7 +85,6 @@ class MyPage extends StatelessWidget {
                 ),
               ),
             ),
-
             Positioned(
               left: 9,
               top: 832,
@@ -113,7 +114,7 @@ class MyPage extends StatelessWidget {
             ),
             Positioned(
               left: 16,
-              top: 72,
+              top: 59,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
@@ -422,31 +423,39 @@ class MyPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 120,
-              top: 184,
-              child: Container(
-                width: 45,
-                height: 15,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(3),
+              left: 96,
+              top: 170,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
                 ),
-              ),
-            ),
-            const Positioned(
-              left: 124,
-              top: 180,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 10,
-                  height: 2.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '정보수정',
-                  textAlign: TextAlign.center,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyModifyPage()),
+                  );
+                },
+                child: Container(
+                  width: 45,
+                  height: 15,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFD9D9D9),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "정보수정",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 10,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
