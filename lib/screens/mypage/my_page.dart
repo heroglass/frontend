@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'my_page_modify.dart';
+import 'my_page_order.dart';
 
 class MyPage extends StatelessWidget {
   const MyPage({super.key});
@@ -21,7 +22,7 @@ class MyPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 16,
+              left: 0,
               top: 148,
               child: Container(
                 width: 361,
@@ -265,6 +266,27 @@ class MyPage extends StatelessWidget {
                 ),
                 child: Text(
                   '구매 목록',
+                ),
+              ),
+            ),
+            Positioned(
+              left: 16,
+              top: 447,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyOrderPage()));
+                },
+                child: Container(
+                  width: 361,
+                  height: 50,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: const BoxDecoration(),
                 ),
               ),
             ),

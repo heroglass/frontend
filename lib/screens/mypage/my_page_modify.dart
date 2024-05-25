@@ -19,7 +19,7 @@ class MyModifyPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 16,
+              left: 0,
               top: 564,
               child: Container(
                 width: 90,
