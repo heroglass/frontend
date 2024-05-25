@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/product.dart';
 import 'package:heroglass/screens/main/product_item.dart';
+import 'package:heroglass/screens/main/search_page.dart';
 import 'package:heroglass/screens/mypage/my_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -548,7 +549,18 @@ class MainPageState extends State<MainPage> {
                 left: 40,
                 top: 768,
                 child: IconButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.push(context,
+                      PageRouteBuilder(
+                        pageBuilder: (BuildContext context,
+                            Animation<double> animation1,
+                            Animation<double> animation2) {
+                          return SearchPage();
+                        },
+                        transitionDuration: Duration.zero,
+                        reverseTransitionDuration: Duration.zero,
+                      ),)
+                  },
                   icon: Icon(Icons.search),
                   iconSize: 40,
                   color: Colors.white,
