@@ -76,11 +76,11 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(313, 40), // 버튼의 최소 크기 지정
-                  backgroundColor: const Color(0xFF333333), // 배경 색상
+                  backgroundColor: const Color(0xFF29435C), // 배경 색상
                   elevation: 0, // 버튼의 그림자 제거
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     // 모서리 둥글기 없음
-                    borderRadius: BorderRadius.zero,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 onPressed: () {
