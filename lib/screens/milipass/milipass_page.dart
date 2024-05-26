@@ -12,7 +12,7 @@ class MilipassPage extends StatelessWidget {
       height: 852,
       clipBehavior: Clip.hardEdge,
       decoration: const BoxDecoration(
-        color: Color(0xFF317000),
+        color: Colors.white,
       ),
       child: SizedBox(
         width: double.infinity,
@@ -20,11 +20,11 @@ class MilipassPage extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             const Positioned(
-                left: 97,
-                top: 548,
+                left: 98,
+                top: 549,
                 child: DefaultTextStyle(
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(0xFF29435C),
                       fontSize: 16,
                       fontFamily: 'Apple SD Gothic Neo',
                       fontWeight: FontWeight.w400,
@@ -32,6 +32,21 @@ class MilipassPage extends StatelessWidget {
                     ),
                     child: Text(
                       '국군장병 안경 신청 배송 서비스',
+                    ))),
+            const Positioned(
+                left: 153,
+                top: 480,
+                child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF29435C),
+                      fontSize: 48,
+                      fontFamily: 'Apple SD Gothic Neo',
+                      fontWeight: FontWeight.w900,
+                      height: 0,
+                      letterSpacing: -4.80,
+                    ),
+                    child: Text(
+                      '히 글',
                     ))),
             Positioned(
               left: 122,
@@ -43,8 +58,11 @@ class MilipassPage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  side: const BorderSide(width: 1, color: Colors.white),
-                  backgroundColor: const Color(0xFF317000),
+                  side: const BorderSide(
+                    width: 1,
+                    color: Color(0xFF29435C),
+                  ),
+                  backgroundColor: Colors.white,
                 ),
                 onPressed: () {
                   // 버튼이 눌렸을 때 실행할 코드
@@ -53,35 +71,24 @@ class MilipassPage extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const SignupPage1()));
                 },
-                child: const Text("밀리패스로 시작"),
+                child: const Text("밀리패스로 시작",style: TextStyle(    color: Color(0xFF29435C),
+                ),),
               ),
-            ),
-            const Positioned(
-              left: 152,
-              top: 479,
-              child: DefaultTextStyle(
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    fontFamily: 'Apple SD Gothic Neo',
-                    fontWeight: FontWeight.w900,
-                    height: 0,
-                    letterSpacing: -4.80,
-                  ),
-                  child: Text(
-                    '히 글',
-                  )),
             ),
             Positioned(
               left: 139,
               top: 277,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa31269afac766d8d5be44664473979e6.png',
-                width: 115,
-                height: 65,
-                fit: BoxFit.contain,
+              child: Container(
+                width: 118,
+                height: 106,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/logo_character.png"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
