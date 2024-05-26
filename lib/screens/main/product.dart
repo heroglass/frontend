@@ -6,8 +6,9 @@ class Product {
   final String price;
   final String itemType;
   final String shipping;
-  final String views;
+  int views;
   final String imageUrl;
+  bool isLiked;
 
   Product({
     required this.id,
@@ -19,5 +20,6 @@ class Product {
     required this.shipping,
     required this.views,
     required this.imageUrl,
+    required this.isLiked,
   });
 }

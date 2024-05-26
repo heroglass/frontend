@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: const Color(0xFF317000),
+                    color: const Color(0xFF8D8D8D),
                   ),
                 ),
               ),
