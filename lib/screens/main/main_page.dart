@@ -53,7 +53,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2F482251f5b366d608c233c2e7810bd97a92f4cc99507f6217ecb1355d4042624fa2f7e5f0-removebg-preview%201.png?alt=media&token=ef1e20bb-e301-4cf1-b3d4-4fa7d8208176',
       isLiked: false,
-
     ),
     Product(
       id: 3,
@@ -67,7 +66,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa276de3e1d238dc5b6a95fd446af2e1c80410a43Rectangle%20109.png?alt=media&token=efa62de8-d23a-404e-bf65-6ab71d87b7e2',
       isLiked: false,
-
     ),
     Product(
       id: 4,
@@ -81,7 +79,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2F44a4ff12124abceb6f2f4907519e8376846146e8Rectangle%20109.png?alt=media&token=d282d615-884b-49c5-92c1-b27d03598e4e',
       isLiked: true,
-
     ),
     Product(
       id: 5,
@@ -95,7 +92,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa276de3e1d238dc5b6a95fd446af2e1c80410a43Rectangle%20109.png?alt=media&token=efa62de8-d23a-404e-bf65-6ab71d87b7e2',
       isLiked: true,
-
     ),
     Product(
       id: 6,
@@ -109,7 +105,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa276de3e1d238dc5b6a95fd446af2e1c80410a43Rectangle%20109.png?alt=media&token=efa62de8-d23a-404e-bf65-6ab71d87b7e2',
       isLiked: false,
-
     ),
     Product(
       id: 7,
@@ -123,7 +118,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa276de3e1d238dc5b6a95fd446af2e1c80410a43Rectangle%20109.png?alt=media&token=efa62de8-d23a-404e-bf65-6ab71d87b7e2',
       isLiked: false,
-
     ),
   ];
 
@@ -140,7 +134,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RSohHNTfiYSSSIIg4yk%2F32173d2313520f135a7405471b998dfbdc9ee611507f6217ecb1355d4042624fa2f7e5f0-removebg-preview%201.png?alt=media&token=8cc55af8-2953-48f6-9ecc-d7a14907fe54',
       isLiked: true,
-
     ),
     Product(
       id: 2,
@@ -154,7 +147,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RSohHNTfiYSSSIIg4yk%2F07b94b7c528bc538795b852f7aca4b2f6b532af4507f6217ecb1355d4042624fa2f7e5f0-removebg-preview%201.png?alt=media&token=29c36dc6-21d2-4632-8f1e-d60f9b7fc8e5',
       isLiked: false,
-
     ),
     Product(
       id: 3,
@@ -168,7 +160,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RSohHNTfiYSSSIIg4yk%2F5b3d5fdc9d478976c8371f75e7637a42ce1f6294507f6217ecb1355d4042624fa2f7e5f0-removebg-preview%201.png?alt=media&token=92d035ef-3363-4c6a-9a5c-6097e57f47c4',
       isLiked: false,
-
     ),
     Product(
       id: 4,
@@ -182,7 +173,6 @@ class MainPageState extends State<MainPage> {
       imageUrl:
           'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RSohHNTfiYSSSIIg4yk%2F51cdfaca9fb087e9bf67fcf3b83fa9c854319ddd507f6217ecb1355d4042624fa2f7e5f0-removebg-preview%201.png?alt=media&token=9f7f8f81-3234-49b3-b839-be163790b456',
       isLiked: false,
-
     ),
   ];
 
@@ -726,22 +716,147 @@ class MainPageState extends State<MainPage> {
                   iconSize: 40,
                   color: Colors.white,
                 )),
-            const Positioned(
-              left: 20,
-              top: 178,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '전체보기',
-                ),
-              ),
-            ),
+            isPressed3
+                ? SizedBox(
+                    width: double.infinity,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        const Positioned(
+                          left: 21,
+                          top: 173,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                              color: Color(0xFF333333),
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              height: 1.6,
+                              fontFamily: 'Apple SD Gothic Neo',
+                            ),
+                            child: Text(
+                              '콘텍트렌즈',
+                            ),
+                          ),
+                        ),
+                        const Positioned(
+                          left: 106,
+                          top: 173,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                              color: Color(0xFF8D8D8D),
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              height: 1.6,
+                              fontFamily: 'Apple SD Gothic Neo',
+                            ),
+                            child: Text(
+                              '하드렌즈',
+                            ),
+                          ),
+                        ),
+                        const Positioned(
+                          left: 185,
+                          top: 173,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                              color: Color(0xFF8D8D8D),
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              height: 1.6,
+                              fontFamily: 'Apple SD Gothic Neo',
+                            ),
+                            child: Text(
+                              '난시・근시 렌즈',
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 91,
+                          top: 180,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(26),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.network(
+                              'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RSohHNTfiYSSSIIg4yk%2F3f4847d2bf1a1d4a017c47fce617e145.png',
+                              width: 1,
+                              height: 11,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 170,
+                          top: 180,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(26),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.network(
+                              'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RSohHNTfiYSSSIIg4yk%2F3f4847d2bf1a1d4a017c47fce617e145.png',
+                              width: 1,
+                              height: 11,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 9,
+                          top: 831,
+                          child: Container(
+                            width: 375,
+                            height: 21,
+                            color: Colors.transparent,
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Positioned(
+                                  left: 118,
+                                  top: 8,
+                                  child: Container(
+                                    width: 139,
+                                    height: 5,
+                                    clipBehavior: Clip.hardEdge,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(100),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 46,
+                          top: 685,
+                          child: Container(
+                            width: 4,
+                            height: 4,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                : Positioned(
+                    left: 20,
+                    top: 178,
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        height: 1.6,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      child: Text(
+                        '전체보기',
+                      ),
+                    ),
+                  ),
             Positioned(
               left: 16,
               top: 115,
