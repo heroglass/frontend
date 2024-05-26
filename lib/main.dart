@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/signin/signin_page.dart';
 import 'package:heroglass/screens/splash/splash_page.dart';
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
         home: const SplashScreen());
   }
 }
-
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -48,7 +46,7 @@ class StartPageState extends State<StartPage> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: const BoxDecoration(color: Color(0xFF317000)),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
               const Positioned(
@@ -56,7 +54,7 @@ class StartPageState extends State<StartPage> {
                   top: 549,
                   child: DefaultTextStyle(
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xFF29435C),
                         fontSize: 16,
                         fontFamily: 'Apple SD Gothic Neo',
                         fontWeight: FontWeight.w400,
@@ -66,20 +64,33 @@ class StartPageState extends State<StartPage> {
                         '국군장병 안경 신청 배송 서비스',
                       ))),
               const Positioned(
-                left: 153,
-                top: 480,
-                child: DefaultTextStyle(
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 48,
-                      fontFamily: 'Apple SD Gothic Neo',
-                      fontWeight: FontWeight.w900,
-                      height: 0,
-                      letterSpacing: -4.80,
+                  left: 153,
+                  top: 480,
+                  child: DefaultTextStyle(
+                      style: TextStyle(
+                        color: Color(0xFF29435C),
+                        fontSize: 48,
+                        fontFamily: 'Apple SD Gothic Neo',
+                        fontWeight: FontWeight.w900,
+                        height: 0,
+                        letterSpacing: -4.80,
+                      ),
+                      child: Text(
+                        '히 글',
+                      ))),
+              Positioned(
+                left: 139,
+                top: 277,
+                child: Container(
+                  width: 118,
+                  height: 106,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/logo_character.png"),
+                      fit: BoxFit.fill,
                     ),
-                    child: Text(
-                      '히 글',
-                    )),
+                  ),
+                ),
               ),
               Positioned(
                 left: 122,
@@ -91,8 +102,11 @@ class StartPageState extends State<StartPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    side: const BorderSide(width: 1, color: Colors.white),
-                    backgroundColor: const Color(0xFF317000),
+                    side: const BorderSide(
+                      width: 1,
+                      color: const Color(0xFF29435C),
+                    ),
+                    backgroundColor: Colors.white,
                   ),
                   onPressed: () {
                     // 버튼이 눌렸을 때 실행할 코드
@@ -101,20 +115,9 @@ class StartPageState extends State<StartPage> {
                         MaterialPageRoute(
                             builder: (context) => const LoginPage()));
                   },
-                  child: const Text("시작하기"),
-                ),
-              ),
-              Positioned(
-                left: 139,
-                top: 277,
-                child: Container(
-                  width: 115,
-                  height: 65,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/logo.png"),
-                      fit: BoxFit.fill,
-                    ),
+                  child: const Text(
+                    "시작하기",
+                    style: TextStyle(color: Color(0xFF29435C)),
                   ),
                 ),
               ),
