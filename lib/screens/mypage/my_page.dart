@@ -79,13 +79,15 @@ class MyPage extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   color: const Color(0x33B4B8C8),
-                  border: Border.all(
-                    color: const Color(0xFF878787),
+                  border: Border(
+                    bottom: BorderSide(
+                      color: const Color(0xFF878787),
+                      width: 1.0, // 경계의 두께
+                    ),
                   ),
                 ),
               ),
             ),
-
             Positioned(
               left: 0,
               top: 59,
@@ -153,21 +155,6 @@ class MyPage extends StatelessWidget {
               ),
             ),
             const Positioned(
-              left: 248,
-              top: 171,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '장바구니',
-                ),
-              ),
-            ),
-            const Positioned(
               left: 312,
               top: 171,
               child: DefaultTextStyle(
@@ -190,7 +177,7 @@ class MyPage extends StatelessWidget {
                 height: 28,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1C301F),
+                  color: const Color(0xFF29435C),
                   borderRadius: BorderRadius.circular(14),
                 ),
               ),
@@ -252,8 +239,10 @@ class MyPage extends StatelessWidget {
                   shadowColor: Colors.transparent,
                 ),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const MyOrderPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MyOrderPage()));
                 },
                 child: Container(
                   width: 361,
@@ -408,16 +397,6 @@ class MyPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 301,
-              top: 178,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fb975d33ac5944da52d9bf396acbf048a.png',
-                width: 1,
-                height: 10,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
               left: 96,
               top: 170,
               child: ElevatedButton(
@@ -429,7 +408,8 @@ class MyPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MyModifyPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const MyModifyPage()),
                   );
                 },
                 child: Container(
@@ -472,79 +452,10 @@ class MyPage extends StatelessWidget {
                 height: 70,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF168535),
+                  color: const Color(0xFF497EB2),
                   borderRadius: BorderRadius.circular(35),
                 ),
-              ),
-            ),
-            Positioned(
-              left: 48,
-              top: 153,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd8c82fb4701b00de79b79907866d475e.png',
-                width: 42,
-                height: 40,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 53,
-              top: 172,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F1735fd9fed882b2c35261c424e38224d.png',
-                width: 32,
-                height: 9,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 64,
-              top: 174,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F75418673a0a44eae814074d677fc1b32.png',
-                width: 10,
-                height: 3,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 64,
-              top: 166,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F2ebde05b7954cf79a3dc2a4af1f539af.png',
-                width: 11,
-                height: 14,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 53,
-              top: 142,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F1ddcb21893c711ff0c9dc440b284d1a3.png',
-                width: 32,
-                height: 47,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 50,
-              top: 166,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F425d4b06aef283cf0858580a0674b412.png',
-                width: 38,
-                height: 14,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 63,
-              top: 180,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F0399df1fe2be7530e35d740f5fb84b71.png',
-                width: 11,
-                height: 4,
-                fit: BoxFit.contain,
+                child: Image.asset("assets/images/soldier.png"),
               ),
             ),
             const Positioned(
