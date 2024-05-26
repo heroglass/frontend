@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'my_page_modify.dart';
@@ -254,7 +253,7 @@ class MyPage extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyOrderPage()));
+                      MaterialPageRoute(builder: (context) => const MyOrderPage()));
                 },
                 child: Container(
                   width: 361,
@@ -430,7 +429,7 @@ class MyPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyModifyPage()),
+                    MaterialPageRoute(builder: (context) => const MyModifyPage()),
                   );
                 },
                 child: Container(

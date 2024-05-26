@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'signup_page1.dart';
@@ -67,12 +66,12 @@ class SignupPage2 extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 40,
               top: 300,
-              child: Container(
+              child: SizedBox(
                 width: 313, // TextField의 너비를 지정
-                child: const Material(
+                child: Material(
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
                     style: TextStyle(
@@ -99,12 +98,12 @@ class SignupPage2 extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 40,
               top: 400,
-              child: Container(
+              child: SizedBox(
                 width: 313, // TextField의 너비를 지정
-                child: const Material(
+                child: Material(
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
                     style: TextStyle(
@@ -131,12 +130,12 @@ class SignupPage2 extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 40,
               top: 474,
-              child: Container(
+              child: SizedBox(
                 width: 313, // TextField의 너비를 지정
-                child: const Material(
+                child: Material(
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
                     style: TextStyle(
@@ -168,10 +167,10 @@ class SignupPage2 extends StatelessWidget {
               top: 611,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color(0xFF333333), // 배경색 설정
-                  minimumSize: Size(149, 40), // 최소 크기 설정
+                  backgroundColor: const Color(0xFF333333), // 배경색 설정
+                  minimumSize: const Size(149, 40), // 최소 크기 설정
                   padding: EdgeInsets.zero, // 내부 패딩 제거
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     // 모서리 둥글기 제거
                     borderRadius: BorderRadius.zero,
                   ),
@@ -179,7 +178,7 @@ class SignupPage2 extends StatelessWidget {
                 onPressed: () {
                   // 첫 번째 버튼 클릭 시 수행할 동작
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignupPage1()));
+                      MaterialPageRoute(builder: (context) => const SignupPage1()));
                 },
                 child: const DefaultTextStyle(
                     style: TextStyle(
@@ -197,8 +196,8 @@ class SignupPage2 extends StatelessWidget {
               top: 611,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color(0xFF333333), // 배경색 설정
-                  minimumSize: Size(149, 40), // 최소 크기 설정
+                  backgroundColor: const Color(0xFF333333), // 배경색 설정
+                  minimumSize: const Size(149, 40), // 최소 크기 설정
                   padding: EdgeInsets.zero, // 내부 패딩 제거
                   shape: const RoundedRectangleBorder(
                     // 모서리 둥글기 제거
@@ -208,7 +207,7 @@ class SignupPage2 extends StatelessWidget {
                 onPressed: () {
                   // 두 번째 버튼 클릭 시 수행할 동작
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignupPage3()));
+                      MaterialPageRoute(builder: (context) => const SignupPage3()));
                 },
                 child: const DefaultTextStyle(
                     style: TextStyle(

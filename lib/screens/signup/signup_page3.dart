@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../main/main_page.dart';
@@ -42,10 +41,10 @@ class SignupPage3 extends StatelessWidget {
               top: 478,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color(0xFF333333), // 버튼의 배경색
-                  minimumSize: Size(313, 40), // 버튼의 크기
+                  backgroundColor: const Color(0xFF333333), // 버튼의 배경색
+                  minimumSize: const Size(313, 40), // 버튼의 크기
                   padding: EdgeInsets.zero, // 내부 패딩 제거
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     // 모서리를 둥글지 않게 설정
                     borderRadius: BorderRadius.zero,
                   ),
@@ -53,7 +52,7 @@ class SignupPage3 extends StatelessWidget {
                 onPressed: () {
                   // 버튼 클릭 시 수행할 동작동
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MainPage()));
+                      MaterialPageRoute(builder: (context) => const MainPage()));
                 },
                 child: const DefaultTextStyle(
                     style: TextStyle(

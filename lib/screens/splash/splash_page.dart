@@ -1,12 +1,13 @@
 
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../main.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const StartPage()),
@@ -31,13 +32,13 @@ class _SplashScreenState extends State<SplashScreen> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF317000)),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
               // 로딩 동그란 바 추가
               const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.white, // 로딩 색상 변경 가능
+                  color: Color(0xFF29435C),
                 ),
               ),
               const Positioned(
@@ -45,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   top: 549,
                   child: DefaultTextStyle(
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xFF29435C),
                         fontSize: 16,
                         fontFamily: 'Apple SD Gothic Neo',
                         fontWeight: FontWeight.w400,
@@ -59,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   top: 480,
                   child: DefaultTextStyle(
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xFF29435C),
                         fontSize: 48,
                         fontFamily: 'Apple SD Gothic Neo',
                         fontWeight: FontWeight.w900,
@@ -73,11 +74,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 left: 139,
                 top: 277,
                 child: Container(
-                  width: 115,
-                  height: 65,
+                  width: 118,
+                  height: 106,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/logo.png"),
+                      image: AssetImage("assets/images/logo_character.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -90,3 +91,5 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+
+

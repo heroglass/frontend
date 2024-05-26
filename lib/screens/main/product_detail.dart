@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:heroglass/screens/main/ar_page.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
@@ -23,7 +24,8 @@ class ProductDetailState extends State<ProductDetail> {
       backgroundColor: Colors.white,
       appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.chevron_left, size: 24.0), // Adjust size here
+            icon: const Icon(Icons.chevron_left, size: 24.0),
+            // Adjust size here
             onPressed: () => Navigator.pop(context),
           ),
           scrolledUnderElevation: 0,
@@ -34,7 +36,7 @@ class ProductDetailState extends State<ProductDetail> {
                 children: [
                   Container(
                     color: Colors.white,
-                    margin: EdgeInsets.only(left: 75),
+                    margin: const EdgeInsets.only(left: 75),
                     child: Image.network(
                       'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa99abf68632999e0b4894556d88b3e69ad7f8c33%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%201.png?alt=media&token=a08465ea-fa2d-4e48-bf2c-e7d88587062d',
                       width: 56,
@@ -68,20 +70,55 @@ class ProductDetailState extends State<ProductDetail> {
                     clipBehavior: Clip.none,
                     children: [
                       Positioned(
-                        left: -6,
+                        left: -20,
                         top: 421 - 115,
-                        child: Container(
-                          width: 404,
-                          height: 55,
-                          clipBehavior: Clip.hardEdge,
-                          decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color(0x19DFDFDF),
-                                Color(0x99DFDFDF),
-                                Color(0xFFDFDFDF)
-                              ],
-                              stops: [0, 0.24, 1],
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.white,
+                            shadowColor: Colors.transparent,
+                          ),
+                          onPressed: () async {
+
+                            await Permission.camera.onDeniedCallback(() {
+                              // Your code
+                              print("denied!!!! why???");
+                            }).onGrantedCallback(() {
+                              print("granted!!!");
+
+                              // Your code
+                            }).onPermanentlyDeniedCallback(() {
+                              print("1");
+
+                              // Your code
+                            }).onRestrictedCallback(() {
+                              print("2");
+                              // Your code
+                            }).onLimitedCallback(() {
+                              print("3");
+                              // Your code
+                            }).onProvisionalCallback(() {
+                              print("4");
+                              // Your code
+                            }).request();
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ArPage()));
+                          },
+                          child: Container(
+                            width: 404,
+                            height: 55,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color(0x19DFDFDF),
+                                  Color(0x99DFDFDF),
+                                  Color(0xFFDFDFDF)
+                                ],
+                                stops: [0, 0.24, 1],
+                              ),
                             ),
                           ),
                         ),

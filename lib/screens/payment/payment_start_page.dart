@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/payment/payment_page.dart';
 
@@ -27,7 +26,7 @@ class _PaymentStartState extends State<PaymentStart> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF3F6541)),
+          decoration: const BoxDecoration(color: Color(0xFF3F6541)),
           child: Stack(
             children: [
               const Positioned(
@@ -66,7 +65,7 @@ class _PaymentStartState extends State<PaymentStart> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    minimumSize: Size(149, 40),
+                    minimumSize: const Size(149, 40),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -76,7 +75,7 @@ class _PaymentStartState extends State<PaymentStart> {
                   onPressed: () {
                     // 버튼이 눌렸을 때 실행할 코드
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Payment()));
+                        MaterialPageRoute(builder: (context) => const Payment()));
                   },
                   child: const Text("결제하기"),
                 ),

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/main_page.dart';
 
@@ -76,8 +75,8 @@ class _LoginPageState extends State<LoginPage> {
               top: 478,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(313, 40), // 버튼의 최소 크기 지정
-                  backgroundColor: Color(0xFF333333), // 배경 색상
+                  minimumSize: const Size(313, 40), // 버튼의 최소 크기 지정
+                  backgroundColor: const Color(0xFF333333), // 배경 색상
                   elevation: 0, // 버튼의 그림자 제거
                   shape: const RoundedRectangleBorder(
                     // 모서리 둥글기 없음
@@ -88,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                   // 버튼 클릭 시 수행할 작업
                   print('버튼이 클릭되었습니다.');
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) =>  MainPage()));
+                      MaterialPageRoute(builder: (context) =>  const MainPage()));
                 },
                 child: const DefaultTextStyle(
                   style: TextStyle(
@@ -105,8 +104,8 @@ class _LoginPageState extends State<LoginPage> {
               top: 530,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Color(0xFF333333), backgroundColor: Colors.transparent, // 텍스트 색상 설정
-                  textStyle: TextStyle(
+                  foregroundColor: const Color(0xFF333333), backgroundColor: Colors.transparent, // 텍스트 색상 설정
+                  textStyle: const TextStyle(
                     fontSize: 12,
                     fontFamily: 'Apple SD Gothic Neo',
                   ),
@@ -117,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                       MaterialPageRoute(
                           builder: (context) => const MilipassPage()));
                 },
-                child: Text('회원가입'),
+                child: const Text('회원가입'),
               ),
             ),
             const Positioned(

@@ -20,7 +20,7 @@ class ProductItem extends StatelessWidget {
       onPressed: () {
         print(product.id);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ProductDetail()));
+            context, MaterialPageRoute(builder: (context) => const ProductDetail()));
       },
       child: Container(
         width: 352,
@@ -51,7 +51,7 @@ class ProductItem extends StatelessWidget {
               left: 79,
               top: 0,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF333333),
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
@@ -67,7 +67,7 @@ class ProductItem extends StatelessWidget {
               left: 79,
               top: 19,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF333333),
                   fontSize: 12,
                   height: 1.8,
@@ -82,7 +82,7 @@ class ProductItem extends StatelessWidget {
               left: 79,
               top: 40,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFFFF0000),
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
@@ -92,10 +92,10 @@ class ProductItem extends StatelessWidget {
                 child: RichText(
                   text: TextSpan(
                     children: [
-                      TextSpan(text: '53%'),
+                      const TextSpan(text: '53%'),
                       TextSpan(
                         text: product.price,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xFF333333),
                         ),
                       )
@@ -134,7 +134,7 @@ class ProductItem extends StatelessWidget {
               left: 87,
               top: 57,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF8D8D8D),
                   fontSize: 10,
                   height: 2,
@@ -149,7 +149,7 @@ class ProductItem extends StatelessWidget {
               left: 147,
               top: 57,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF8D8D8D),
                   fontSize: 10,
                   height: 2,
@@ -164,7 +164,7 @@ class ProductItem extends StatelessWidget {
               left: 328,
               top: 27,
               child: DefaultTextStyle(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF333333),
                   fontSize: 10,
                   height: 2.2,
@@ -182,7 +182,7 @@ class ProductItem extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   // 이미지 버튼 클릭 시 처리 내용 작성
-                  print('좋아요 버튼 클릭됨' + product.id.toString());
+                  print('좋아요 버튼 클릭됨${product.id}');
                 },
                 child: Image.network(
                   'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',

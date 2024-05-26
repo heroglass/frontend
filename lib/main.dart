@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SplashScreen());
+        home: const SplashScreen());
   }
 }
 
@@ -48,7 +48,7 @@ class StartPageState extends State<StartPage> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF317000)),
+          decoration: const BoxDecoration(color: Color(0xFF317000)),
           child: Stack(
             children: [
               const Positioned(
@@ -87,7 +87,7 @@ class StartPageState extends State<StartPage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    minimumSize: Size(149, 40),
+                    minimumSize: const Size(149, 40),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),

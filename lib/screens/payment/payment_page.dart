@@ -4,11 +4,13 @@ import 'package:iamport_flutter/iamport_payment.dart';
 import 'package:iamport_flutter/model/payment_data.dart';
 
 class Payment extends StatelessWidget {
+  const Payment({super.key});
+
   @override
   Widget build(BuildContext context) {
     return IamportPayment(
       appBar: AppBar(
-        title: Text('결제'),
+        title: const Text('결제'),
       ),
       /* 웹뷰 로딩 컴포넌트 */
       initialChild: Container(

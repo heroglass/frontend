@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+
+	<key>NSExceptionDomains</key>
+		<dict>
+			<key>웹뷰 도메인</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--Not a recommended way, there are better solutions available-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <!-- Permission options for the `camera` group -->
+    <key>NSCameraUsageDescription</key>
+    <string>camera</string>
+
     <key>NSAppTransportSecurity</key>
     <dict>
       <!-- Allow Arbitrary Loads in Web Content 속성을 true로 설정 -->

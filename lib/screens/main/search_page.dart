@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/main_page.dart';
 
@@ -548,7 +547,7 @@ class SearchPage extends StatelessWidget {
                 top: 768,
                 child: IconButton(
                   onPressed: () => {},
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   iconSize: 40,
                   color: Colors.white,
                 )),
@@ -563,14 +562,14 @@ class SearchPage extends StatelessWidget {
                         pageBuilder: (BuildContext context,
                             Animation<double> animation1,
                             Animation<double> animation2) {
-                          return MainPage(); //변경 필요
+                          return const MainPage(); //변경 필요
                         },
                         transitionDuration: Duration.zero,
                         reverseTransitionDuration: Duration.zero,
                       ),
                     )
                   },
-                  icon: Icon(Icons.home_outlined),
+                  icon: const Icon(Icons.home_outlined),
                   iconSize: 40,
                   color: Colors.white,
                 )),
@@ -580,9 +579,9 @@ class SearchPage extends StatelessWidget {
                 child: IconButton(
                   onPressed: () => {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (contxet) => MyPage()))
+                        MaterialPageRoute(builder: (contxet) => const MyPage()))
                   },
-                  icon: Icon(Icons.perm_identity_outlined),
+                  icon: const Icon(Icons.perm_identity_outlined),
                   iconSize: 40,
                   color: Colors.white,
                 )),

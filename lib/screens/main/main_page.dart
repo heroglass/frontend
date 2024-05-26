@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/product.dart';
 import 'package:heroglass/screens/main/product_item.dart';
@@ -8,6 +7,8 @@ import 'package:heroglass/screens/main/search_page.dart';
 import 'package:heroglass/screens/mypage/my_page.dart';
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   MainPageState createState() => MainPageState();
 }
@@ -423,7 +424,7 @@ class MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-                margin: EdgeInsets.fromLTRB(16, 210, 0, 0),
+                margin: const EdgeInsets.fromLTRB(16, 210, 0, 0),
                 height: 315,
                 child: ListView.builder(
                     padding: EdgeInsets.zero,
@@ -555,13 +556,13 @@ class MainPageState extends State<MainPage> {
                         pageBuilder: (BuildContext context,
                             Animation<double> animation1,
                             Animation<double> animation2) {
-                          return SearchPage();
+                          return const SearchPage();
                         },
                         transitionDuration: Duration.zero,
                         reverseTransitionDuration: Duration.zero,
                       ),)
                   },
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   iconSize: 40,
                   color: Colors.white,
                 )),
@@ -570,7 +571,7 @@ class MainPageState extends State<MainPage> {
                 top: 768,
                 child: IconButton(
                   onPressed: () => {},
-                  icon: Icon(Icons.home_outlined),
+                  icon: const Icon(Icons.home_outlined),
                   iconSize: 40,
                   color: Colors.white,
                 )),
@@ -580,9 +581,9 @@ class MainPageState extends State<MainPage> {
                 child: IconButton(
                   onPressed: () => {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (contxet) => MyPage()))
+                        MaterialPageRoute(builder: (contxet) => const MyPage()))
                   },
-                  icon: Icon(Icons.perm_identity_outlined),
+                  icon: const Icon(Icons.perm_identity_outlined),
                   iconSize: 40,
                   color: Colors.white,
                 )),
@@ -624,7 +625,7 @@ class MainPageState extends State<MainPage> {
                   },
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
-                        color: isPressed1 ? Colors.black : Color(0xFF8D8D8D)),
+                        color: isPressed1 ? Colors.black : const Color(0xFF8D8D8D)),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
                     ),
@@ -635,7 +636,7 @@ class MainPageState extends State<MainPage> {
                       '안경테',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: isPressed1 ? Colors.black : Color(0xFF8D8D8D),
+                        color: isPressed1 ? Colors.black : const Color(0xFF8D8D8D),
                         fontSize: 14,
                         height: 1.6,
                         fontFamily: 'Apple SD Gothic Neo',
@@ -668,7 +669,7 @@ class MainPageState extends State<MainPage> {
                   },
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
-                        color: isPressed2 ? Colors.black : Color(0xFF8D8D8D)),
+                        color: isPressed2 ? Colors.black : const Color(0xFF8D8D8D)),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
                     ),
@@ -679,7 +680,7 @@ class MainPageState extends State<MainPage> {
                       '안경알',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: isPressed2 ? Colors.black : Color(0xFF8D8D8D),
+                        color: isPressed2 ? Colors.black : const Color(0xFF8D8D8D),
                         fontSize: 14,
                         height: 1.6,
                         fontFamily: 'Apple SD Gothic Neo',
@@ -712,7 +713,7 @@ class MainPageState extends State<MainPage> {
                   },
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
-                        color: isPressed3 ? Colors.black : Color(0xFF8D8D8D)),
+                        color: isPressed3 ? Colors.black : const Color(0xFF8D8D8D)),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
                     ),
@@ -723,7 +724,7 @@ class MainPageState extends State<MainPage> {
                       '렌즈',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: isPressed3 ? Colors.black : Color(0xFF8D8D8D),
+                        color: isPressed3 ? Colors.black : const Color(0xFF8D8D8D),
                         fontSize: 14,
                         height: 1.6,
                         fontFamily: 'Apple SD Gothic Neo',
@@ -756,7 +757,7 @@ class MainPageState extends State<MainPage> {
                   },
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
-                        color: isPressed4 ? Colors.black : Color(0xFF8D8D8D)),
+                        color: isPressed4 ? Colors.black : const Color(0xFF8D8D8D)),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
                     ),
@@ -767,7 +768,7 @@ class MainPageState extends State<MainPage> {
                       '선글라스',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: isPressed4 ? Colors.black : Color(0xFF8D8D8D),
+                        color: isPressed4 ? Colors.black : const Color(0xFF8D8D8D),
                         fontSize: 14,
                         height: 1.6,
                         fontFamily: 'Apple SD Gothic Neo',
