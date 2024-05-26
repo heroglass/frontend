@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../signup/signup_page1.dart';
+import 'milipass_page2.dart';
 
 class MilipassPage extends StatelessWidget {
   const MilipassPage({super.key});
@@ -69,7 +70,7 @@ class MilipassPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SignupPage1()));
+                          builder: (context) => const MilipassPage2()));
                 },
                 child: const Text("밀리패스로 시작",style: TextStyle(    color: Color(0xFF29435C),
                 ),),
