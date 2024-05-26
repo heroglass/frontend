@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import 'signup_page2.dart';
@@ -70,7 +68,7 @@ class SignupPage1 extends StatelessWidget {
                         fontFamily: 'Apple SD Gothic Neo',
                       ),
                       contentPadding:
-                      EdgeInsets.symmetric(horizontal: 10), // 내부 패딩 조절
+                          EdgeInsets.symmetric(horizontal: 10), // 내부 패딩 조절
                     ),
                   ),
                 ),
@@ -91,17 +89,19 @@ class SignupPage1 extends StatelessWidget {
               top: 478,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xFF333333), // 버튼의 배경색
+                  backgroundColor: const Color(0xFF29435C), // 버튼의 배경색
                   minimumSize: const Size(313, 40), // 버튼의 최소 크기
                   padding: EdgeInsets.zero, // 내부 여백 없애기
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero, // 모서리 둥글기 제거
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20), // 모서리 둥글기 제거
                   ),
                 ),
                 onPressed: () {
                   // 버튼 클릭 시 수행할 동작
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const SignupPage2()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignupPage2()));
                 },
                 child: const DefaultTextStyle(
                   style: TextStyle(

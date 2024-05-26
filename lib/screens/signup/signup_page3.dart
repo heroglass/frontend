@@ -41,12 +41,12 @@ class SignupPage3 extends StatelessWidget {
               top: 478,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xFF333333), // 버튼의 배경색
+                  backgroundColor: const Color(0xFF29435C), // 버튼의 배경색
                   minimumSize: const Size(313, 40), // 버튼의 크기
                   padding: EdgeInsets.zero, // 내부 패딩 제거
-                  shape: const RoundedRectangleBorder(
+                  shape:  RoundedRectangleBorder(
                     // 모서리를 둥글지 않게 설정
-                    borderRadius: BorderRadius.zero,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 onPressed: () {

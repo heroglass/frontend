@@ -91,7 +91,7 @@ class SignupPage2 extends StatelessWidget {
                       ),
                       border: InputBorder.none, // 테두리 제거
                       contentPadding:
-                      EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
+                          EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
                     ),
                     cursorColor: Color(0xFFCFCFCF), // 커서 색상
                   ),
@@ -123,7 +123,7 @@ class SignupPage2 extends StatelessWidget {
                       ),
                       border: InputBorder.none, // 테두리 제거
                       contentPadding:
-                      EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
+                          EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
                     ),
                     cursorColor: Color(0xFFCFCFCF), // 커서 색상
                   ),
@@ -155,7 +155,7 @@ class SignupPage2 extends StatelessWidget {
                       ),
                       border: InputBorder.none, // 테두리 제거
                       contentPadding:
-                      EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
+                          EdgeInsets.fromLTRB(0, 10, 0, 10), // 상하 패딩 조절
                     ),
                     cursorColor: Color(0xFFCFCFCF), // 커서 색상
                   ),
@@ -167,18 +167,20 @@ class SignupPage2 extends StatelessWidget {
               top: 611,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xFF333333), // 배경색 설정
+                  backgroundColor: const Color(0xFFB4B8C8), // 배경색 설정
                   minimumSize: const Size(149, 40), // 최소 크기 설정
                   padding: EdgeInsets.zero, // 내부 패딩 제거
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     // 모서리 둥글기 제거
-                    borderRadius: BorderRadius.zero,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 onPressed: () {
                   // 첫 번째 버튼 클릭 시 수행할 동작
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const SignupPage1()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignupPage1()));
                 },
                 child: const DefaultTextStyle(
                     style: TextStyle(
@@ -196,18 +198,20 @@ class SignupPage2 extends StatelessWidget {
               top: 611,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color(0xFF333333), // 배경색 설정
+                  backgroundColor: const Color(0xFF29435C), // 배경색 설정
                   minimumSize: const Size(149, 40), // 최소 크기 설정
                   padding: EdgeInsets.zero, // 내부 패딩 제거
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     // 모서리 둥글기 제거
-                    borderRadius: BorderRadius.zero,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 onPressed: () {
                   // 두 번째 버튼 클릭 시 수행할 동작
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const SignupPage3()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignupPage3()));
                 },
                 child: const DefaultTextStyle(
                     style: TextStyle(
