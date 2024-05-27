@@ -158,7 +158,7 @@ class MyCouponPage extends StatelessWidget {
                     color: Color(0xFF333333),
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
-                    height: 2.2,
+                    height: 1.8,
                     fontFamily: 'Apple SD Gothic Neo',
                   ),
                   child: Text(

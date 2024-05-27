@@ -4,6 +4,7 @@ import '../payment/payment_management_page.dart';
 import 'my_page_coupon.dart';
 import 'my_page_delivery.dart';
 import 'my_page_modify.dart';
+import 'my_page_narasarang.dart';
 import 'my_page_order.dart';
 
 class MyPage extends StatelessWidget {
@@ -130,6 +131,18 @@ class MyPage extends StatelessWidget {
                       width: 1.0, // 경계의 두께
                     ),
                   ),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyNaraPage()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                  ),
+                  child: null,
                 ),
               ),
             ),
