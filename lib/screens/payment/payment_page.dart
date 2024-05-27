@@ -10,6 +10,7 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return IamportPayment(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: const Text('결제'),
       ),
       /* 웹뷰 로딩 컴포넌트 */

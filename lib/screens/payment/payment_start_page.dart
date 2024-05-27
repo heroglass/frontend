@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:heroglass/screens/main/product_detail.dart';
 import 'package:heroglass/screens/payment/payment_page.dart';
 
 class PaymentStart extends StatefulWidget {
@@ -10,94 +10,89 @@ class PaymentStart extends StatefulWidget {
 }
 
 class _PaymentStartState extends State<PaymentStart> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 393,
-          height: 852,
-          clipBehavior: Clip.antiAlias,
-          decoration: const BoxDecoration(color: Color(0xFF3F6541)),
-          child: Stack(
-            children: [
-              const Positioned(
-                  left: 98,
-                  top: 549,
+    return Container(
+      width: 393,
+      height: 852,
+      clipBehavior: Clip.hardEdge,
+      decoration: const BoxDecoration(
+        color: Color(0xFF29435C),
+      ),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            left: 165,
+            top: 761,
+            child: Image.network(
+              'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2F72872922881f73333d8d91269b2c089fe9b64193%E1%84%80%E1%85%AE%E1%86%A8%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%AE%20%E1%84%86%E1%85%A1%E1%84%8F%E1%85%B3_%E1%84%8F%E1%85%A5%E1%86%AF%E1%84%85%E1%85%A5%E1%84%87%E1%85%A9%E1%86%AB%201.png?alt=media&token=ec3d8281-b9ff-4c76-b982-1383a9f5eb72',
+              width: 63,
+              height: 50,
+              fit: BoxFit.cover,
+            ),
+          ),
+          const Positioned(
+            left: 140,
+            top: 300,
+            child: DefaultTextStyle(
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                fontWeight: FontWeight.w800,
+                height: 1.3,
+                fontFamily: 'Apple SD Gothic Neo',
+              ),
+              child: Text(
+                '결제 완료',
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+
+          Positioned(
+            left: 122,
+            top: 542-130,
+            child: SizedBox(
+              width: 149,
+              height: 40,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Color(0xFF29435C),
+                  side: BorderSide(color: Colors.white),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProductDetail()));
+                  // 버튼이 눌렸을 때의 동작을 여기에 추가하세요.
+                },
+                child: const Positioned(
+                  left: 165,
+                  top: 552,
                   child: DefaultTextStyle(
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontFamily: 'Apple SD Gothic Neo',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                      child: Text(
-                        '국군장병 안경 신청 배송 서비스',
-                      ))),
-              const Positioned(
-                left: 153,
-                top: 480,
-                child: DefaultTextStyle(
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 48,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                       fontFamily: 'Apple SD Gothic Neo',
-                      fontWeight: FontWeight.w900,
-                      height: 0,
-                      letterSpacing: -4.80,
                     ),
                     child: Text(
-                      '히 글',
-                    )),
-              ),
-              Positioned(
-                left: 122,
-                top: 604,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    minimumSize: const Size(149, 40),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    side: const BorderSide(width: 1, color: Colors.white),
-                    backgroundColor: const Color(0xFF3F6541),
-                  ),
-                  onPressed: () {
-                    // 버튼이 눌렸을 때 실행할 코드
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const Payment()));
-                  },
-                  child: const Text("결제하기"),
-                ),
-              ),
-              Positioned(
-                left: 139,
-                top: 277,
-                child: Container(
-                  width: 115,
-                  height: 65,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/logo.png"),
-                      fit: BoxFit.fill,
+                      '돌아가기',
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
-        ),
-      ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
