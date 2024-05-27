@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'my_page_delivery.dart';
 import 'my_page_modify.dart';
 import 'my_page_order.dart';
 
@@ -43,6 +44,20 @@ class MyPage extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
                   color: Color(0xFFFBFBFB),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyDeliveryPage()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                  ),
+                  child: null,
                 ),
               ),
             ),
@@ -408,8 +423,7 @@ class MyPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => MyModifyPage()),
+                    MaterialPageRoute(builder: (context) => MyModifyPage()),
                   );
                 },
                 child: Container(
