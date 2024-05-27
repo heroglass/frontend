@@ -1,10 +1,71 @@
 import 'package:flutter/material.dart';
 
 class MyModifyPage extends StatelessWidget {
-  const MyModifyPage({super.key});
+  MyModifyPage({super.key});
 
+  OverlayEntry? _popupOverlayEntry;
+  OverlayEntry? _popupOverlayEntry2;
+
+  void _showPopup(BuildContext context, GlobalKey key) {
+    final renderBox = key.currentContext!.findRenderObject() as RenderBox;
+    final offset = renderBox.localToGlobal(Offset.zero);
+
+    _popupOverlayEntry = OverlayEntry(
+      builder: (context) => Positioned(
+        left: 85,
+        top: 258,
+        child: Material(
+          color: Colors.transparent,
+          child: Container(
+            color: Colors.transparent,
+            child: Image.asset(
+              'assets/images/explain1.png',
+            ),
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context)!.insert(_popupOverlayEntry!);
+  }
+
+
+  void _showPopup2(BuildContext context, GlobalKey key) {
+    final renderBox = key.currentContext!.findRenderObject() as RenderBox;
+    final offset = renderBox.localToGlobal(Offset.zero);
+
+    _popupOverlayEntry2 = OverlayEntry(
+      builder: (context) => Positioned(
+        left: 85,
+        top: 306,
+        child: Material(
+          color: Colors.transparent,
+          child: Container(
+            color: Colors.transparent,
+            child: Image.asset(
+              'assets/images/explain2.png',
+            ),
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context)!.insert(_popupOverlayEntry2!);
+  }
+
+  void _hidePopup() {
+    _popupOverlayEntry?.remove();
+    _popupOverlayEntry = null;
+  }
+  void _hidePopup2() {
+    _popupOverlayEntry2?.remove();
+    _popupOverlayEntry2 = null;
+  }
   @override
   Widget build(BuildContext context) {
+    GlobalKey buttonKey = GlobalKey();
+    GlobalKey buttonKey2 = GlobalKey();
+
     return Container(
       width: 393,
       height: 852,
@@ -98,7 +159,7 @@ class MyModifyPage extends StatelessWidget {
                 height: 160,
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
-                  color: Color(0x7FB4B8C8),
+                  color: Color.fromRGBO(180, 184, 200, 50),
                 ),
               ),
             ),
@@ -162,121 +223,11 @@ class MyModifyPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 16,
-              top: 135,
-              child: Container(
-                width: 104,
-                height: 104,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF168535),
-                  borderRadius: BorderRadius.circular(52),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 37,
-              top: 162,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F33dca27365572933e034b5c0902bf33c.png',
-                width: 62,
-                height: 60,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 44,
-              top: 190,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F9d69cf224f0cccee82e41a7f13557569.png',
-                width: 48,
-                height: 14,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 61,
-              top: 194,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fc592d357a7cf992c16a06092a0d1cf97.png',
-                width: 14,
-                height: 5,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 60,
-              top: 181,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fbb3adcf89c5d96627efe6994de0ab4c2.png',
-                width: 16,
-                height: 21,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 44,
-              top: 145,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F72435dd81991a56caedc7b0ec5694a7b.png',
-                width: 47,
-                height: 70,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 40,
-              top: 182,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F19fa49a30705b50864ef72eeff14602a.png',
-                width: 57,
-                height: 20,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 60,
-              top: 202,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F201f7042cc44a84fdcda19efa60bc829.png',
-                width: 17,
-                height: 5,
-                fit: BoxFit.contain,
-              ),
-            ),
-            const Positioned(
-              left: 148,
-              top: 175,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 4,
-                  height: 1.2,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '김희글',
-                ),
-              ),
-            ),
-            Positioned(
               left: 144,
               top: 216,
               child: Image.network(
                 'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F51a8372376ee853dcc9a904e4567f888.png',
                 width: 193,
-                height: 0,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 36,
-              top: 416,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F1490cd689c9a6547acc56ea7b78ba074.png',
-                width: 321,
                 height: 0,
                 fit: BoxFit.contain,
               ),
@@ -379,7 +330,7 @@ class MyModifyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 42,
-              top: 324,
+              top: 319,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Color(0xFF333333),
@@ -394,7 +345,7 @@ class MyModifyPage extends StatelessWidget {
             ),
             const Positioned(
               left: 42,
-              top: 372,
+              top: 366,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Color(0xFF333333),
@@ -645,6 +596,22 @@ class MyModifyPage extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(4),
                 ),
+                child: ElevatedButton(
+                  key: buttonKey,
+                  onPressed: () {
+                    if (_popupOverlayEntry == null) {
+                      _showPopup(context, buttonKey);
+                    } else {
+                      _hidePopup();
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                  ),
+                  child: null,
+                ),
               ),
             ),
             Positioned(
@@ -670,6 +637,22 @@ class MyModifyPage extends StatelessWidget {
                     color: const Color(0xFF8D8D8D),
                   ),
                   borderRadius: BorderRadius.circular(4),
+                ),
+                child: ElevatedButton(
+                  key: buttonKey2,
+                  onPressed: () {
+                    if (_popupOverlayEntry2 == null) {
+                      _showPopup2(context, buttonKey2);
+                    } else {
+                      _hidePopup2();
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                  ),
+                  child: null,
                 ),
               ),
             ),
@@ -751,26 +734,6 @@ class MyModifyPage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            Positioned(
-              left: 204,
-              top: 628,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F9a7d638df389e3c560e82fb7addf06e2.png',
-                width: 165,
-                height: 47,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 30,
-              top: 628,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fbac62bb3628170fce60b8715481b7753.png',
-                width: 150,
-                height: 46,
-                fit: BoxFit.contain,
-              ),
-            ),
             const Positioned(
               left: 26,
               top: 537,
@@ -796,16 +759,6 @@ class MyModifyPage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            Positioned(
-              left: 60,
-              top: 607,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F377f2a7f92a4d042fd1e020640cdb7d6.png',
-                width: 12,
-                height: 12,
-                fit: BoxFit.contain,
-              ),
-            ),
             const Positioned(
               left: 116,
               top: 537,
@@ -824,16 +777,6 @@ class MyModifyPage extends StatelessWidget {
             Positioned(
               left: 173,
               top: 543,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F401f12981eea4aada50edccfc14003c7.png',
-                width: 12,
-                height: 12,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Positioned(
-              left: 186,
-              top: 645,
               child: Image.network(
                 'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F401f12981eea4aada50edccfc14003c7.png',
                 width: 12,
@@ -867,16 +810,6 @@ class MyModifyPage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            Positioned(
-              left: 99,
-              top: 677,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2F31265899ff92ef91f0debf16a219a651.png',
-                width: 12,
-                height: 12,
-                fit: BoxFit.contain,
-              ),
-            ),
             const Positioned(
               left: 299,
               top: 537,
@@ -903,15 +836,37 @@ class MyModifyPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 277,
-              top: 677,
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fc48e4bd7991ea42ff2e88e7b3eed1e02.png',
-                width: 12,
-                height: 12,
+              left: 30,
+              top: 607,
+              child: Image.asset(
+                "assets/images/glasses_size.png",
                 fit: BoxFit.contain,
               ),
-            )
+            ),
+            Positioned(
+              left: 16,
+              top: 135,
+              child: Image.asset(
+                "assets/images/soldier_big.png",
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              left: 36,
+              top: 416,
+              child: Image.asset(
+                "assets/images/mypage_modify_line.png",
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              left: 144,
+              top: 177,
+              child: Image.asset(
+                "assets/images/mypage_name.png",
+                fit: BoxFit.contain,
+              ),
+            ),
           ],
         ),
       ),

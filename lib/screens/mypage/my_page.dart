@@ -409,7 +409,7 @@ class MyPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const MyModifyPage()),
+                        builder: (context) => MyModifyPage()),
                   );
                 },
                 child: Container(
