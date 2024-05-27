@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../payment/payment_management_page.dart';
 import 'my_page_delivery.dart';
 import 'my_page_modify.dart';
 import 'my_page_order.dart';
@@ -70,6 +71,20 @@ class MyPage extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
                   color: Color(0x33B4B8C8),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PaymentManagementPage()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                  ),
+                  child: null,
                 ),
               ),
             ),
