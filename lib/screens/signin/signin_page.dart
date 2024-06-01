@@ -45,13 +45,28 @@ class _LoginPageState extends State<LoginPage> {
             Positioned(
               left: 40,
               top: 341,
-              child: Container(
-                width: 313,
-                height: 40,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+              child: Material(
+                // Material 위젯 추가
+                child: Container(
+                  width: 313,
+                  height: 40,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xFF8D8D8D),
+                    ),
+                  ),
+                  child: TextField(
+                    style: TextStyle(fontSize: 14),
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: '아이디 또는 이메일',
+                      fillColor: Colors.white,
+                      // 내부 색상을 화이트로 설정
+                      filled: true,
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 11), // 텍스트 왼쪽 패딩 추가
+                    ),
                   ),
                 ),
               ),
@@ -59,13 +74,29 @@ class _LoginPageState extends State<LoginPage> {
             Positioned(
               left: 40,
               top: 391,
-              child: Container(
-                width: 313,
-                height: 40,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xFF8D8D8D),
+              child: Material(
+                // Material 위젯 추가
+                child: Container(
+                  width: 313,
+                  height: 40,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xFF8D8D8D),
+                    ),
+                  ),
+                  child: TextField(
+                    style: TextStyle(fontSize: 14),
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: '비밀번호',
+                      fillColor: Colors.white,
+                      // 내부 색상을 화이트로 설정
+                      filled: true,
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 11),
+                    ),
                   ),
                 ),
               ),
@@ -86,8 +117,10 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   // 버튼 클릭 시 수행할 작업
                   print('버튼이 클릭되었습니다.');
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) =>  const MainPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainPage()));
                 },
                 child: const DefaultTextStyle(
                   style: TextStyle(
@@ -104,7 +137,9 @@ class _LoginPageState extends State<LoginPage> {
               top: 530,
               child: TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: const Color(0xFF333333), backgroundColor: Colors.transparent, // 텍스트 색상 설정
+                  foregroundColor: const Color(0xFF333333),
+                  backgroundColor: Colors.transparent,
+                  // 텍스트 색상 설정
                   textStyle: const TextStyle(
                     fontSize: 12,
                     fontFamily: 'Apple SD Gothic Neo',
@@ -117,36 +152,6 @@ class _LoginPageState extends State<LoginPage> {
                           builder: (context) => const MilipassPage()));
                 },
                 child: const Text('회원가입'),
-              ),
-            ),
-            const Positioned(
-              left: 59,
-              top: 349,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '아이디 또는 이메일',
-                ),
-              ),
-            ),
-            const Positioned(
-              left: 59,
-              top: 399,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 12,
-                  height: 1.8,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  '비밀번호',
-                ),
               ),
             ),
             const Positioned(
