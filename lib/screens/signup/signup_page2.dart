@@ -75,7 +75,7 @@ class SignupPage2 extends StatelessWidget {
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
                     style: TextStyle(
-                      color: Color(0xFFCFCFCF),
+                      color: Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.w800,
                       height: 1.1,
@@ -106,8 +106,9 @@ class SignupPage2 extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
+                    obscureText: true,
                     style: TextStyle(
-                      color: Color(0xFFCFCFCF),
+                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       height: 1.1,
@@ -138,8 +139,9 @@ class SignupPage2 extends StatelessWidget {
                 child: Material(
                   color: Colors.transparent, // Material의 배경을 투명하게 설정
                   child: TextField(
+                    obscureText: true,
                     style: TextStyle(
-                      color: Color(0xFFCFCFCF),
+                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       height: 1.1,
