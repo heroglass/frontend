@@ -1097,7 +1097,7 @@ class AdBanner extends StatelessWidget {
               height: 350,
               clipBehavior: Clip.hardEdge,
               decoration: const BoxDecoration(
-                color: Color(0xFFB4B8C8),
+                color: Color(0xFF152A38),
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(20),
                 ),
