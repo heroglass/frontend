@@ -51,7 +51,7 @@ class SignupPage1 extends StatelessWidget {
                   ),
                   child: const TextField(
                     style: TextStyle(
-                      color: Color(0xFFCFCFCF),
+                      color: Colors.black,
                       fontSize: 24,
                       fontWeight: FontWeight.w800,
                       height: 0.9,
