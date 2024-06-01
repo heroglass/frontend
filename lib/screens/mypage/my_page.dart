@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroglass/screens/mypage/my_page_glasses.dart';
 
 import '../payment/payment_management_page.dart';
 import 'my_page_coupon.dart';
@@ -709,7 +710,30 @@ class MyPage extends StatelessWidget {
                 height: 50,
                 fit: BoxFit.cover,
               ),
-            )
+            ),
+            Positioned(
+              left: 16,
+              top: 546,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.transparent,
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MyGlassesPage()));
+                },
+                child: Container(
+                  width: 315,
+                  height: 50,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: const BoxDecoration(),
+                ),
+              ),
+            ),
           ],
         ),
       ),
