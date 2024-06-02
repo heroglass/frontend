@@ -214,6 +214,13 @@ class MainPageState extends State<MainPage> {
                 ),
               ),
             ),
+
+            Positioned(
+              left: 345,
+              top: 177,
+              child: Image.asset("assets/images/more.png")
+            ),
+
             Positioned(
               left: 9,
               top: 831,
