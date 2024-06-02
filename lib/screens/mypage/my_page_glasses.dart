@@ -51,6 +51,25 @@ class _MyGlassesPageState extends State<MyGlassesPage> {
         latLng: LatLng(37.56215680528043, 126.97738027621673),
         address: "서울특별시 중구 북창동 25"),
   ];
+  BitmapDescriptor markerIcon = BitmapDescriptor.defaultMarker;
+
+  @override
+  void initState() {
+    addCustomIcon();
+    super.initState();
+  }
+
+  void addCustomIcon() {
+    BitmapDescriptor.fromAssetImage(
+            const ImageConfiguration(), "assets/images/marker.png")
+        .then(
+      (icon) {
+        setState(() {
+          markerIcon = icon;
+        });
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -301,6 +320,7 @@ class _MyGlassesPageState extends State<MyGlassesPage> {
                     initialCameraPosition: _kGooglePlex,
                     markers: shops
                         .map((shop) => Marker(
+                              icon: markerIcon,
                               markerId: MarkerId(shop.name),
                               position: shop.latLng,
                               infoWindow: InfoWindow(
