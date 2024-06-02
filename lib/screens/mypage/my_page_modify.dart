@@ -259,8 +259,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left:22.0),
-
+                    padding: const EdgeInsets.only(left: 22.0),
                     child: TextField(
                       cursorColor: Colors.transparent,
                       style: TextStyle(
@@ -294,7 +293,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left:22.0),
+                    padding: const EdgeInsets.only(left: 22.0),
                     child: TextField(
                       cursorColor: Colors.transparent,
                       style: TextStyle(
@@ -328,7 +327,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left:22.0),
+                    padding: const EdgeInsets.only(left: 22.0),
                     child: TextField(
                       cursorColor: Colors.transparent,
                       style: TextStyle(
@@ -362,7 +361,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left:22.0),
+                    padding: const EdgeInsets.only(left: 22.0),
                     child: TextField(
                       cursorColor: Colors.transparent,
                       style: TextStyle(
@@ -380,7 +379,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 ),
               ),
             ),
-
             const Positioned(
               left: 197,
               top: 321.5,
@@ -397,7 +395,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 ),
               ),
             ),
-
             const Positioned(
               left: 306,
               top: 321.5,
@@ -414,8 +411,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 ),
               ),
             ),
-
-
             const Positioned(
               left: 197,
               top: 369.5,
@@ -432,7 +427,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 ),
               ),
             ),
-
             const Positioned(
               left: 306,
               top: 369.5,
@@ -449,9 +443,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 ),
               ),
             ),
-
-
-
             const Positioned(
               left: 26,
               top: 510,
@@ -786,6 +777,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                   onPressed: () {
                     if (_popupOverlayEntry == null) {
                       _showPopup(context, buttonKey);
+                      _hidePopup2();
                     } else {
                       _hidePopup();
                     }
@@ -828,6 +820,7 @@ class _MyModifyPageState extends State<MyModifyPage> {
                   onPressed: () {
                     if (_popupOverlayEntry2 == null) {
                       _showPopup2(context, buttonKey2);
+                      _hidePopup();
                     } else {
                       _hidePopup2();
                     }
@@ -1067,7 +1060,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
             ),
             Visibility(
               visible: isEdited,
-
               child: Positioned(
                 left: 110,
                 top: 423,
@@ -1081,7 +1073,6 @@ class _MyModifyPageState extends State<MyModifyPage> {
             ),
             Visibility(
               visible: isEdited,
-
               child: Positioned(
                 left: 140,
                 top: 428,
