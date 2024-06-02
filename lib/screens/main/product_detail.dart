@@ -63,7 +63,7 @@ class ProductDetailState extends State<ProductDetail> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8.0, top: 10.0),
                       child: const Text(
-                        '엠버옵티컬',
+                        '엠버옵티컬 (amber optical)',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
