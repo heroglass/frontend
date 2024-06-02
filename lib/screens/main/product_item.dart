@@ -193,7 +193,7 @@ class ProductItemState extends State<ProductItem> {
             Positioned(
               left: 316,
               top: 27,
-              child:Container(
+              child: Container(
                 width: 50, // 텍스트가 정렬될 고정된 너비
                 child: Align(
                   alignment: Alignment.center,
@@ -235,17 +235,17 @@ class ProductItemState extends State<ProductItem> {
                 },
                 child: product.isLiked
                     ? Image.network(
-                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
-                  width: 18,
-                  height: 17,
-                  fit: BoxFit.contain,
-                )
+                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fa2e89b4336a4c6861284d9dafd9d543d.png',
+                        width: 18,
+                        height: 17,
+                        fit: BoxFit.contain,
+                      )
                     : Image.network(
-                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd34ce61a04d63c31b23460f0b2c3bc27.png',
-                  width: 18,
-                  height: 17,
-                  fit: BoxFit.contain,
-                ),
+                        'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RRUuKI2AiTTo4xvf7Pj%2Fd34ce61a04d63c31b23460f0b2c3bc27.png',
+                        width: 18,
+                        height: 17,
+                        fit: BoxFit.contain,
+                      ),
               ),
             )
           ],
