@@ -5,8 +5,48 @@ import 'package:heroglass/screens/main/main_page.dart';
 
 import '../mypage/my_page.dart';
 
-class SearchPage extends StatelessWidget {
+class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
+
+  @override
+  State<SearchPage> createState() => _SearchPageState();
+}
+
+class _SearchPageState extends State<SearchPage> {
+  TextEditingController _controller = TextEditingController();
+  List<String> _allItems = ['뿔테 안경', '뿔테 안경 렌즈', '뿔테', '금속 뿔테', '경질 뿔테 안경'];
+  List<String> _filteredItems = [];
+  FocusNode _focusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _filteredItems.addAll(_allItems);
+    _focusNode.addListener(() {
+      if (!_focusNode.hasFocus) {
+        setState(() => _filteredItems.clear());
+      }
+    });
+  }
+
+  void _filterItems(String query) {
+    if (query.isEmpty) {
+      setState(() => _filteredItems.addAll(_allItems));
+    } else {
+      setState(() {
+        _filteredItems = _allItems
+            .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+            .toList();
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _focusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,19 +110,41 @@ class SearchPage extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 55,
-                top: 130,
-                child: DefaultTextStyle(
-                  style: TextStyle(
-                    color: Color(0xFFCFCFCF),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                    height: 1.2,
-                    fontFamily: 'Apple SD Gothic Neo',
-                  ),
-                  child: Text(
-                    '검색어를 입력해주세요. ex) 뿔테 안경',
+                top: 127,
+                child: SizedBox(
+                  width: 300,
+                  height: 30,
+                  child: Material(
+                    child: TextField(
+                      focusNode: _focusNode,
+                      controller: _controller,
+                      onChanged: _filterItems,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                        height: 1.2,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      decoration: const InputDecoration(
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: InputBorder.none,
+                        hintText: '검색어를 입력해주세요. ex) 뿔테 안경',
+                        hintStyle: TextStyle(
+                          color: Color(0xFFCFCFCF),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                          fontFamily: 'Apple SD Gothic Neo',
+                        ),
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      ),
+
+                      cursorColor: Color(0xFFCFCFCF), // 커서 색상
+                    ),
                   ),
                 ),
               ),
@@ -425,7 +487,7 @@ class SearchPage extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left:85,
+                left: 85,
                 top: 68,
                 child: Text(
                   '히 글',
@@ -588,7 +650,62 @@ class SearchPage extends StatelessWidget {
                   height: 19,
                   fit: BoxFit.contain,
                 ),
-              )
+              ),
+              Visibility(
+                visible: _focusNode.hasFocus && _filteredItems.isNotEmpty,
+                child: Padding(
+                  padding:  EdgeInsets.only(top: 160.0),
+                  child: Material(
+                    color: Colors.white,
+                    type: MaterialType.transparency,
+                    child: Container(
+                      color: Colors.white,
+                      height: 600,
+                      child: Container(
+                        color: Colors.white,
+                        child: ListView.builder(
+                          padding: EdgeInsets.zero,
+                          itemCount: _filteredItems.length,
+                          itemBuilder: (context, index) {
+                            final item = _filteredItems[index];
+                            final queryText = _controller.text;
+                            final startIndex = item
+                                .toLowerCase()
+                                .indexOf(queryText.toLowerCase());
+
+                            return ListTile(
+                              contentPadding: EdgeInsets.only(left: 30.0),
+
+                              visualDensity: VisualDensity.compact,
+                              title: startIndex >= 0
+                                  ? RichText(
+                                      text: TextSpan(
+                                        text: item.substring(0, startIndex),
+                                        style: TextStyle(color: Colors.black),
+                                        children: [
+                                          TextSpan(
+                                            text: item.substring(startIndex,
+                                                startIndex + queryText.length),
+                                            style: TextStyle(
+                                                color: Colors.red,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          TextSpan(
+                                            text: item.substring(
+                                                startIndex + queryText.length),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  : Text(item),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
