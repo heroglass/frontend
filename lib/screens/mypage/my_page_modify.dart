@@ -1045,6 +1045,14 @@ class _MyModifyPageState extends State<MyModifyPage> {
                 fit: BoxFit.contain,
               ),
             ),
+            Positioned(
+              left: 150,
+              top: 224,
+              child: Image.asset(
+                "assets/images/address.png",
+                fit: BoxFit.contain,
+              ),
+            ),
             Visibility(
               visible: isEdited,
               child: Positioned(
