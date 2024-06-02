@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:heroglass/screens/main/ar_page.dart';
 import 'package:heroglass/screens/main/main_page.dart';
@@ -14,6 +16,7 @@ class ProductDetail extends StatefulWidget {
 
 class ProductDetailState extends State<ProductDetail> {
   int _selectedIndex = 0;
+  String dropdownValue = '옵션 선택'; // 초기 선택 값 설정
 
   void _onItemTapped(int index) {
     setState(() {
@@ -25,57 +28,59 @@ class ProductDetailState extends State<ProductDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-          leading: IconButton(
-              icon: const Icon(Icons.chevron_left, size: 24.0),
-              // Adjust size here
-              onPressed: () => {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MainPage()))
-                  }),
-          scrolledUnderElevation: 0,
-          backgroundColor: Colors.white,
-          title: DefaultTextStyle(
-            style: const TextStyle(
-              color: Color(0xFF333333),
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              height: 1.4,
-              fontFamily: 'Apple SD Gothic Neo',
-            ),
-            child: Container(
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Container(
-                      color: Colors.white,
-                      margin: const EdgeInsets.only(left: 75),
-                      child: Image.network(
-                        'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa99abf68632999e0b4894556d88b3e69ad7f8c33%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%201.png?alt=media&token=a08465ea-fa2d-4e48-bf2c-e7d88587062d',
-                        width: 56,
-                        height: 50,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 6),
-                      child: Text(
-                        "히글",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                  ],
-                )),
-          )),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 45.0),
+            child: Row(
+              children: [
+                Container(
+                  height: 40,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF29435C),
+                  ),
+                  child: IconButton(
+                      icon: const Icon(
+                        Icons.chevron_left,
+                        size: 24.0,
+                        color: Colors.white,
+                      ),
+                      // Adjust size here
+                      onPressed: () => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage()))
+                          }),
+                ),
+                Container(
+                    width: 345,
+                    height: 40,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF29435C),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0, top: 10.0),
+                      child: const Text(
+                        '엠버옵티컬',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          height: 1.6,
+                          fontFamily: 'Apple SD Gothic Neo',
+                        ),
+                      ),
+                    )),
+              ],
+            ),
+          ),
           Expanded(
             child: SingleChildScrollView(
               child: Container(
                 width: 393,
-                height: 1701,
+                height: 1740,
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -657,27 +662,127 @@ class ProductDetailState extends State<ProductDetail> {
                         ),
                       ),
                       Positioned(
-                          left: 45,
+                          left: 0,
                           top: 1600,
-                          child: SizedBox(
-                            width: 300,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  foregroundColor: Color(0xFF29435C),
-                                  backgroundColor: Color(0xFF29435C),
-                                  shadowColor: Colors.blue,
+                          child: Container(
+                            width: 393,
+                            height: 143,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: const BoxDecoration(),
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Positioned(
+                                  left: 0,
+                                  top: 0,
+                                  child: Container(
+                                    width: 393,
+                                    height: 143,
+                                    clipBehavior: Clip.hardEdge,
+                                    decoration: const BoxDecoration(
+                                      color: Color(0xFFDFE3E7),
+                                    ),
+                                  ),
                                 ),
-                                onPressed: () => {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const Payment()))
+                                Positioned(
+                                  left: 16,
+                                  top: 26,
+                                  child: Container(
+                                    width: 362,
+                                    height: 35,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(
+                                        color: const Color(
+                                            0x7F000000), // 반투명 검은색 테두리
+                                      ),
+                                      borderRadius:
+                                          BorderRadius.circular(3), // 모서리 둥글게
+                                    ),
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<String>(
+                                        value: dropdownValue,
+
+                                        icon: const Icon(Icons.chevron_left),
+                                        // 드롭다운 아이콘
+                                        iconSize: 24,
+                                        // 아이콘 크기
+                                        elevation: 16,
+                                        // 그림자 깊이
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 16),
+                                        // 텍스트 스타일
+                                        onChanged: (String? newValue) {
+                                          setState(() {
+                                            dropdownValue = newValue!;
+                                          });
+                                        },
+                                        items: <String>[
+                                          '옵션 선택',
+                                          '옵션 1',
+                                          '옵션 2',
+                                          '옵션 3'
+                                        ].map<DropdownMenuItem<String>>(
+                                            (String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 10),
+                                              // 내용물 좌우 패딩
+                                              child: Text(value),
+                                            ),
+                                          );
+                                        }).toList(),
+                                        dropdownColor: Colors.white,
+                                        isExpanded: true,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 16,
+                                  top: 69,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      foregroundColor: Colors.black, backgroundColor: Colors.white, // 텍스트 색상
+                                      minimumSize: Size(170, 35), // 버튼 크기
+                                      shape: RoundedRectangleBorder( // 버튼의 모서리를 둥글게
+                                        borderRadius: BorderRadius.circular(3),
+                                        side: BorderSide(color: Color(0xFF29435C)), // 테두리 색상
+                                      ),
+                                      elevation: 2, // 그림자 깊이
+                                      shadowColor: Color(0x3F000000), // 그림자 색상
+                                    ),
+                                    onPressed: () {
+                                      // 버튼 클릭 시 실행할 동작
                                     },
-                                child: DefaultTextStyle(
-                                    style: TextStyle(color: Colors.white),
-                                    child: Text("구매하기"))),
-                          ))
+                                    child: Text('장바구니'), // 버튼의 텍스트
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 207,
+                                  top: 70,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      foregroundColor: Colors.white, backgroundColor: Color(0xFF29435C), // 텍스트 색상 설정
+                                      minimumSize: Size(170, 35), // 버튼 크기
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(3), // 버튼 모서리 둥글게
+                                      ),
+                                      elevation: 2, // 그림자 깊이
+                                      shadowColor: Color(0x3F000000), // 그림자 색상
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Payment()));
+                                    },
+                                    child: Text('구매하기', style: TextStyle(fontSize: 14)), // 버튼 텍스트
+                                  ),
+                                )
+
+                              ],
+                            ),
+                          )),
                     ],
                   ),
                 ),
