@@ -415,29 +415,27 @@ class SearchPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 147,
+                left: 16,
                 top: 52,
                 child: Image.network(
-                  'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa99abf68632999e0b4894556d88b3e69ad7f8c33%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%201.png?alt=media&token=45bbfd6b-3d04-4959-84e9-ad368e64d6a9',
+                  'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RRUuKI2AiTTo4xvf7Pj%2Fa99abf68632999e0b4894556d88b3e69ad7f8c33%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8_%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%201.png?alt=media&token=91f8e408-4b66-49c8-ac6b-e66d21c5cbe9',
                   width: 56,
                   height: 50,
                   fit: BoxFit.cover,
                 ),
               ),
               const Positioned(
-                left: 212,
+                left:85,
                 top: 68,
-                child: DefaultTextStyle(
+                child: Text(
+                  '히 글',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color(0xFF1C301F),
+                    color: Color(0xFF29435C),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: -3,
                     fontFamily: 'Apple SD Gothic Neo',
-                  ),
-                  child: Text(
-                    '히 글',
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
