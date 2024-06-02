@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MyModifyPage extends StatelessWidget {
+class MyModifyPage extends StatefulWidget {
   MyModifyPage({super.key});
 
+  @override
+  State<MyModifyPage> createState() => _MyModifyPageState();
+}
+
+class _MyModifyPageState extends State<MyModifyPage> {
   OverlayEntry? _popupOverlayEntry;
+
   OverlayEntry? _popupOverlayEntry2;
+
+  bool isEdited = false;
 
   void _showPopup(BuildContext context, GlobalKey key) {
     final renderBox = key.currentContext!.findRenderObject() as RenderBox;
@@ -28,7 +36,6 @@ class MyModifyPage extends StatelessWidget {
 
     Overlay.of(context)!.insert(_popupOverlayEntry!);
   }
-
 
   void _showPopup2(BuildContext context, GlobalKey key) {
     final renderBox = key.currentContext!.findRenderObject() as RenderBox;
@@ -57,10 +64,12 @@ class MyModifyPage extends StatelessWidget {
     _popupOverlayEntry?.remove();
     _popupOverlayEntry = null;
   }
+
   void _hidePopup2() {
     _popupOverlayEntry2?.remove();
     _popupOverlayEntry2 = null;
   }
+
   @override
   Widget build(BuildContext context) {
     GlobalKey buttonKey = GlobalKey();
@@ -159,7 +168,7 @@ class MyModifyPage extends StatelessWidget {
                 height: 160,
                 clipBehavior: Clip.hardEdge,
                 decoration: const BoxDecoration(
-                  color: Color.fromRGBO(180, 184, 200, 50),
+                  color: Color(0x7FB4B8C8),
                 ),
               ),
             ),
@@ -232,57 +241,149 @@ class MyModifyPage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 194,
               top: 324,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  'L : 0.5',
+              child: Material(
+                child: Container(
+                  width: 50,
+                  // 적절한 너비 설정
+                  height: 20,
+                  // 적절한 높이 설정
+                  decoration: BoxDecoration(
+                    color: !isEdited ? Color(0x7FB4B8C8) : Colors.white60,
+                    border: Border.all(
+                      color: isEdited
+                          ? const Color(0xFF5A5D68)
+                          : Colors.transparent,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:22.0),
+
+                    child: TextField(
+                      cursorColor: Colors.transparent,
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      decoration: InputDecoration(
+                        hintText: '0.5',
+                        border: InputBorder.none, // 테두리 제거
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 194,
               top: 372,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  'L : 1.1',
+              child: Material(
+                child: Container(
+                  width: 50, // 적절한 너비 설정
+                  height: 20, // 적절한 높이 설정
+                  decoration: BoxDecoration(
+                    color: !isEdited ? Color(0x7FB4B8C8) : Colors.white60,
+                    border: Border.all(
+                      color: isEdited
+                          ? const Color(0xFF5A5D68)
+                          : Colors.transparent,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:22.0),
+                    child: TextField(
+                      cursorColor: Colors.transparent,
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      decoration: InputDecoration(
+                        hintText: '1.1',
+                        border: InputBorder.none, // 테두리 제거
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            const Positioned(
-              left: 307,
+            Positioned(
+              left: 303,
               top: 372,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Color(0xFF333333),
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  height: 1.6,
-                  fontFamily: 'Apple SD Gothic Neo',
-                ),
-                child: Text(
-                  'R : 1.2',
+              child: Material(
+                child: Container(
+                  width: 50, // 적절한 너비 설정
+                  height: 20, // 적절한 높이 설정
+                  decoration: BoxDecoration(
+                    color: !isEdited ? Color(0x7FB4B8C8) : Colors.white60,
+                    border: Border.all(
+                      color: isEdited
+                          ? const Color(0xFF5A5D68)
+                          : Colors.transparent,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:22.0),
+                    child: TextField(
+                      cursorColor: Colors.transparent,
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      decoration: InputDecoration(
+                        hintText: '1.2',
+                        border: InputBorder.none, // 테두리 제거
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 303,
               top: 324,
+              child: Material(
+                child: Container(
+                  width: 50, // 적절한 너비 설정
+                  height: 20, // 적절한 높이 설정
+                  decoration: BoxDecoration(
+                    color: !isEdited ? Color(0x7FB4B8C8) : Colors.white60,
+                    border: Border.all(
+                      color: isEdited
+                          ? const Color(0xFF5A5D68)
+                          : Colors.transparent,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:22.0),
+                    child: TextField(
+                      cursorColor: Colors.transparent,
+                      style: TextStyle(
+                        color: Color(0xFF333333),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Apple SD Gothic Neo',
+                      ),
+                      decoration: InputDecoration(
+                        hintText: '0.7',
+                        border: InputBorder.none, // 테두리 제거
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            const Positioned(
+              left: 197,
+              top: 321.5,
               child: DefaultTextStyle(
                 style: TextStyle(
                   color: Color(0xFF333333),
@@ -292,10 +393,65 @@ class MyModifyPage extends StatelessWidget {
                   fontFamily: 'Apple SD Gothic Neo',
                 ),
                 child: Text(
-                  'R : 0.7',
+                  'L : ',
                 ),
               ),
             ),
+
+            const Positioned(
+              left: 306,
+              top: 321.5,
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  color: Color(0xFF333333),
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  height: 1.6,
+                  fontFamily: 'Apple SD Gothic Neo',
+                ),
+                child: Text(
+                  'R : ',
+                ),
+              ),
+            ),
+
+
+            const Positioned(
+              left: 197,
+              top: 369.5,
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  color: Color(0xFF333333),
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  height: 1.6,
+                  fontFamily: 'Apple SD Gothic Neo',
+                ),
+                child: Text(
+                  'L : ',
+                ),
+              ),
+            ),
+
+            const Positioned(
+              left: 306,
+              top: 369.5,
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  color: Color(0xFF333333),
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  height: 1.6,
+                  fontFamily: 'Apple SD Gothic Neo',
+                ),
+                child: Text(
+                  'R : ',
+                ),
+              ),
+            ),
+
+
+
             const Positioned(
               left: 26,
               top: 510,
@@ -500,35 +656,64 @@ class MyModifyPage extends StatelessWidget {
                 ),
               ),
             ),
-            const Positioned(
-              left: 96,
-              top: 275,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold,
-                  height: 2.8,
-                  fontFamily: 'Apple SD Gothic Neo',
+            Positioned(
+              left: 90,
+              top: 278,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  // 패딩 제거
+                  minimumSize: Size(30, 10),
+                  // 최소 크기 설정
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  // 높이를 내용에 맞게 축소
+                  backgroundColor: Colors.transparent,
+                  // 배경색 투명
+                  foregroundColor: Colors.white, // 전경색 (텍스트 색상)
                 ),
+                onPressed: () {
+                  setState(() {
+                    isEdited = !isEdited;
+                  });
+                  // 클릭 시 수행할 작업
+                },
                 child: Text(
                   'EDIT',
+                  style: TextStyle(
+                    fontSize: 8,
+                    fontWeight: FontWeight.bold,
+                    height: 2.8,
+                    fontFamily: 'Apple SD Gothic Neo',
+                  ),
                 ),
               ),
             ),
-            const Positioned(
-              left: 136,
-              top: 508,
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold,
-                  height: 2.8,
-                  fontFamily: 'Apple SD Gothic Neo',
+            Positioned(
+              left: 130,
+              top: 511,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  // 패딩 제거
+                  minimumSize: Size(30, 10),
+                  // 최소 크기 설정
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  // 높이를 내용에 맞게 축소
+                  backgroundColor: Colors.transparent,
+                  // 배경색 투명
+                  foregroundColor: Colors.white, // 전경색 (텍스트 색상)
                 ),
+                onPressed: () {
+                  // 클릭 시 수행할 작업
+                },
                 child: Text(
                   'EDIT',
+                  style: TextStyle(
+                    fontSize: 8,
+                    fontWeight: FontWeight.bold,
+                    height: 2.8,
+                    fontFamily: 'Apple SD Gothic Neo',
+                  ),
                 ),
               ),
             ),
@@ -865,6 +1050,47 @@ class MyModifyPage extends StatelessWidget {
               child: Image.asset(
                 "assets/images/mypage_name.png",
                 fit: BoxFit.contain,
+              ),
+            ),
+            Visibility(
+              visible: isEdited,
+              child: Positioned(
+                left: 65,
+                top: 423,
+                child: Image.asset(
+                  "assets/images/close.png",
+                  width: 13,
+                  height: 13,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isEdited,
+
+              child: Positioned(
+                left: 110,
+                top: 423,
+                child: Image.asset(
+                  "assets/images/close.png",
+                  width: 13,
+                  height: 13,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isEdited,
+
+              child: Positioned(
+                left: 140,
+                top: 428,
+                child: Image.asset(
+                  "assets/images/add.png",
+                  width: 18,
+                  height: 18,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ],

@@ -28,7 +28,7 @@ class MainPageState extends State<MainPage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _showAdBanner(context);
     });
-    _timer = Timer.periodic(Duration(seconds: 6), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 2), (timer) {
       setState(() {
         // 이미지 교체
         _currentAd = _currentAd == 'assets/images/ad2.png'
