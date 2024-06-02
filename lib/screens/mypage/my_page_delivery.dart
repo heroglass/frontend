@@ -362,6 +362,11 @@ class MyDeliveryPage extends StatelessWidget {
                 height: 60,
                 fit: BoxFit.contain,
               ),
+            ),
+            Positioned(
+              left: 16,
+              top: 390,
+              child: Image.asset("assets/images/delivery.png"),
             )
           ],
         ),

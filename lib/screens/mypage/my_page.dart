@@ -50,17 +50,18 @@ class MyPage extends StatelessWidget {
                   color: Color(0xFFFBFBFB),
                 ),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0.0,
+                    foregroundColor: Color(0xFFFBFBFB),
+                    backgroundColor: Color(0xFFFBFBFB),
+                    shadowColor: Color(0xFFFBFBFB),
+                  ),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => MyDeliveryPage()));
                   },
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.transparent,
-                    backgroundColor: Colors.transparent,
-                    shadowColor: Colors.transparent,
-                  ),
                   child: null,
                 ),
               ),

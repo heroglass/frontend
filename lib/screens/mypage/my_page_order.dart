@@ -465,7 +465,21 @@ class MyOrderPage extends StatelessWidget {
                   '~',
                 ),
               ),
-            )
+            ),
+
+            Positioned(
+              left: 106,
+              top: 158,
+              child: Image.asset("assets/images/calendar.png"),
+            ),
+
+            Positioned(
+              left: 249,
+              top: 158,
+              child: Image.asset("assets/images/calendar.png"),
+            ),
+
+
           ],
         ),
       ),
