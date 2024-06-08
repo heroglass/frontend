@@ -61,7 +61,7 @@ class StartPageState extends State<StartPage> {
                         height: 0,
                       ),
                       child: Text(
-                        '국군장병 안경 신청 배송 서비스',
+                        '국군장병 안경 구매 배송 서비스',
                       ))),
               const Positioned(
                   left: 153,
